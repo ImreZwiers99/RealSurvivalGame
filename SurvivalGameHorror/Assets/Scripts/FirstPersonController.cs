@@ -23,6 +23,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float walkSpeed = 3f;
     [SerializeField] private float sprintSpeed = 6f;
     [SerializeField] private float crouchSpeed = 1.5f;
+    [SerializeField] private float acceleration = 1.5f;
 
     [Header("Look Variables")]
     [SerializeField, Range(1, 10)] private float lookSpeedX = 2f;
@@ -85,13 +86,20 @@ public class FirstPersonController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            currentInput = new Vector2((isCrouching ? crouchSpeed : isSprinting ? sprintSpeed : walkSpeed) * Input.GetAxis("Vertical"), (isCrouching ? crouchSpeed : isSprinting ? sprintSpeed : walkSpeed) * Input.GetAxis("Horizontal"));
+            float targetSpeed = isCrouching ? crouchSpeed : isSprinting ? sprintSpeed : walkSpeed;
+            float targetInputX = targetSpeed * Input.GetAxis("Vertical");
+            float targetInputY = targetSpeed * Input.GetAxis("Horizontal");
+
+            currentInput.x = Mathf.MoveTowards(currentInput.x, targetInputX, Time.deltaTime * acceleration);
+            currentInput.y = Mathf.MoveTowards(currentInput.y, targetInputY, Time.deltaTime * acceleration);
 
             float moveDirectionY = moveDirection.y;
             moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);
             moveDirection.y = moveDirectionY;
         }
     }
+
+
 
     private void HandleMouseLook()
     {
