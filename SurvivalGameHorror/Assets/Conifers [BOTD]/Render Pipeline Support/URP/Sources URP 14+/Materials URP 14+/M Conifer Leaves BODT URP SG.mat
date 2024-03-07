@@ -123,7 +123,7 @@ Material:
     - _ColorMultiplier: 1
     - _Cull: 0
     - _Culling: 0
-    - _Cutoff: 0.001
+    - _Cutoff: 0.6
     - _DebugBending: 0
     - _DebugMode: 4
     - _DetailMode: 0
