@@ -17,6 +17,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool canHeadbob = true;
     [SerializeField] private bool slideOnSlopes = true;
     [SerializeField] private bool useStamina = true;
+    public bool isMenuActive;
 
     [Header("Controls")]
     [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
@@ -59,6 +60,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float timeUntilRegenStart = 3f;
     [SerializeField] private float staminaRegenTick = 2f;
     [SerializeField] private float staminaRegenSpeed = 0.1f;
+    [SerializeField] private float jumpStaminaCost = 10f;
     private float currentStamina;
     private Coroutine regeneratingStamina;
     public static Action<float> staminaChange;
@@ -82,7 +84,6 @@ public class FirstPersonController : MonoBehaviour
 
     public GameObject saveMenu;
     private bool inSavePoint;
-    private bool isMenuActive;
     private Camera playerCamera;
     private CharacterController characterController;
 
@@ -95,32 +96,34 @@ public class FirstPersonController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         currentStamina = maxStamina;
         defaultPosY = playerCamera.transform.localPosition.y;
+
+    }
+    private void Start()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isMenuActive = false;
     }
-
     void Update()
     {
+        if (isMenuActive)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape) && inSavePoint)
         {
-            // Toggle the menu's active state
             isMenuActive = !isMenuActive;
 
-            // Activate/deactivate the save menu accordingly
             saveMenu.SetActive(isMenuActive);
 
-            // Set cursor lock state and visibility based on menu state
-            if (isMenuActive)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked; // Lock the cursor when the menu is closed
-                Cursor.visible = false;
-            }
+           
         }
         if (canMove)
         {       
@@ -176,14 +179,26 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleJump()
     {
-        if (!isCrouching)
+        if (!isCrouching && shouldJump && currentStamina > 0)
         {
-            if (shouldJump)
+            moveDirection.y = jumpForce;
+            currentStamina -= jumpStaminaCost; // Define jumpStaminaCost variable representing stamina consumption for jumping
+            if (currentStamina < 0)
             {
-                moveDirection.y = jumpForce;
+                currentStamina = 0;
             }
+            staminaChange?.Invoke(currentStamina);
+
+            // Reset the coroutine responsible for regenerating stamina
+            if (regeneratingStamina != null)
+            {
+                StopCoroutine(regeneratingStamina);
+            }
+            regeneratingStamina = StartCoroutine(RegenerateStamina());
         }
     }
+
+
 
     private void HandleCrouch()
     {

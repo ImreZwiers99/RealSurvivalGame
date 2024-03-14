@@ -4,7 +4,7 @@ using SaveIsEasy;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class ExampleControlGUI : MonoBehaviour
+public class ExampleControlUI : MonoBehaviour
 {
     public TMP_InputField fileNameInput;
     private Scene selectedScene;

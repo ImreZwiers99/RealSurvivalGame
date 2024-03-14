@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &817955844948115704
+--- !u!1 &471289929096855323
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,145 +8,180 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5108525481466434}
-  - component: {fileID: 4016645409411241447}
-  - component: {fileID: 1177984811675541805}
+  - component: {fileID: 476951035086599305}
+  - component: {fileID: 572418367727144295}
+  - component: {fileID: 572418367727144296}
   m_Layer: 0
-  m_Name: Photo
+  m_Name: WhiteLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5108525481466434
+--- !u!4 &476951035086599305
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817955844948115704}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.003634, y: -0.009, z: 0.49777365}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_GameObject: {fileID: 471289929096855323}
+  m_LocalRotation: {x: -0.3618273, y: 0.60752034, z: 0.60752034, w: 0.36182743}
+  m_LocalPosition: {x: 0.0036929445, y: 0.09289999, z: -0.0020005368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3741506350897419084}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4016645409411241447
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817955844948115704}
-  m_Mesh: {fileID: -462981019419857548, guid: ef3fd0dca0e824d4391cf76d83693dcb, type: 3}
---- !u!23 &1177984811675541805
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817955844948115704}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 25b9c5eb8158fdd4e8d92e3f6087d5dc, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3257847397933217705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2773621839095475475}
-  - component: {fileID: 1284152389045199542}
-  - component: {fileID: 3906536787225532028}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2773621839095475475
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257847397933217705}
-  m_LocalRotation: {x: -0.68301284, y: 0.18301237, z: 0.18301238, w: 0.6830128}
-  m_LocalPosition: {x: 0.3660915, y: 0.49300003, z: 0.9322586}
-  m_LocalScale: {x: 90, y: 22.782576, z: 50}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3741506350897419084}
+  m_Father: {fileID: 476975230662570135}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 30}
---- !u!33 &1284152389045199542
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &572418367727144295
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471289929096855323}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 35
+  m_Range: 100
+  m_SpotAngle: 90
+  m_InnerSpotAngle: 45
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 2800000, guid: 29135c4c1148bc44883907ae1a731420, type: 3}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &572418367727144296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471289929096855323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &472306973810139663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 476975230662570135}
+  - component: {fileID: 503065839447819901}
+  - component: {fileID: 495292596288060869}
+  - component: {fileID: 566533407526993809}
+  m_Layer: 0
+  m_Name: Flashlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &476975230662570135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472306973810139663}
+  m_LocalRotation: {x: 0.7064338, y: -0.030843573, z: 0.030843573, w: 0.7064338}
+  m_LocalPosition: {x: 0.3, y: -0.1, z: 0.2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 476951035086599305}
+  m_Father: {fileID: 4522408652321491074}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: -5, z: 0}
+--- !u!33 &503065839447819901
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257847397933217705}
-  m_Mesh: {fileID: -5495902117074765545, guid: 5f7d90e7564839d4a9b6699270ad6454, type: 3}
---- !u!23 &3906536787225532028
+  m_GameObject: {fileID: 472306973810139663}
+  m_Mesh: {fileID: 4300000, guid: 9a3b57f0a1248be419dd9c4d54748512, type: 3}
+--- !u!23 &495292596288060869
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257847397933217705}
+  m_GameObject: {fileID: 472306973810139663}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15a52f3d5e1a4d84bb5b56d369a84b99, type: 2}
-  - {fileID: 2100000, guid: 427411f805c74414499158789f7a55a6, type: 2}
-  - {fileID: 2100000, guid: aca8008a8378af941a35a62d79526576, type: 2}
+  - {fileID: 2100000, guid: 930adfdfdd9fafd469ffb427a452359d, type: 2}
+  - {fileID: 2100000, guid: 140db2315bb006848a12d719229080a3, type: 2}
+  - {fileID: 2100000, guid: 0eb0f996ba805c34c9e5dc4df46deb6b, type: 2}
+  - {fileID: 2100000, guid: bb59d9535c521eb48994e16487f7b2b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +193,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -168,7 +203,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3295422537610164735
+--- !u!95 &566533407526993809
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472306973810139663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9a3b57f0a1248be419dd9c4d54748512, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &4522408650906382468
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,42 +231,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3295422537610164732}
-  - component: {fileID: 3295422537610164733}
-  - component: {fileID: 3295422537610164734}
-  - component: {fileID: 3295422537610164723}
+  - component: {fileID: 4522408650906382471}
+  - component: {fileID: 4522408650906382470}
+  - component: {fileID: 4522408650906382469}
+  - component: {fileID: 4522408650906382472}
   m_Layer: 0
-  m_Name: -==Player==- 1
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3295422537610164732
+--- !u!4 &4522408650906382471
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422537610164735}
+  m_GameObject: {fileID: 4522408650906382468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 178.02, y: 2.88, z: 105.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 3741506350897419084}
-  - {fileID: 3295422539164729849}
-  - {fileID: 3295422538935503893}
+  - {fileID: 4522408652321491074}
+  - {fileID: 4522408652265309550}
+  - {fileID: 6089625623905626180}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &3295422537610164733
+--- !u!143 &4522408650906382470
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422537610164735}
+  m_GameObject: {fileID: 4522408650906382468}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -223,13 +278,13 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3295422537610164734
+--- !u!114 &4522408650906382469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422537610164735}
+  m_GameObject: {fileID: 4522408650906382468}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df09c0bb471f9804b9dceeba23ddd5b0, type: 3}
@@ -266,15 +321,16 @@ MonoBehaviour:
   staminaUseSpeed: 5
   timeUntilRegenStart: 3
   staminaRegenTick: 0.01
-  staminaRegenSpeed: 0.1
+  staminaRegenSpeed: 0.15
+  jumpStaminaCost: 5
   saveMenu: {fileID: 0}
---- !u!114 &3295422537610164723
+--- !u!114 &4522408650906382472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422537610164735}
+  m_GameObject: {fileID: 4522408650906382468}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -499960783, guid: c3ab396f3f53d1c4ebc7bae03391b186, type: 3}
@@ -283,6 +339,97 @@ MonoBehaviour:
   FieldsEnable:
     Version: 2
     PathsEnabled:
+    - GameObject/layer
+    - GameObject/isStatic
+    - GameObject/tag
+    - GameObject/name
+    - GameObject/activeSelf
+    - GameObject
+    - FirstPersonController/<canMove>k__BackingField
+    - FirstPersonController/canSprint
+    - FirstPersonController/canJump
+    - FirstPersonController/canCrouch
+    - FirstPersonController/canHeadbob
+    - FirstPersonController/slideOnSlopes
+    - FirstPersonController/useStamina
+    - FirstPersonController/sprintKey/value__
+    - FirstPersonController/sprintKey
+    - FirstPersonController/jumpKey/value__
+    - FirstPersonController/jumpKey
+    - FirstPersonController/crouchKey/value__
+    - FirstPersonController/crouchKey
+    - FirstPersonController/walkSpeed
+    - FirstPersonController/sprintSpeed
+    - FirstPersonController/crouchSpeed
+    - FirstPersonController/slopeFallSpeed
+    - FirstPersonController/acceleration
+    - FirstPersonController/jumpForce
+    - FirstPersonController/gravity
+    - FirstPersonController/crouchHeight
+    - FirstPersonController/standingHeight
+    - FirstPersonController/timeToCrouch
+    - FirstPersonController/crouchingCenter/x
+    - FirstPersonController/crouchingCenter/y
+    - FirstPersonController/crouchingCenter/z
+    - FirstPersonController/crouchingCenter
+    - FirstPersonController/standingCenter/x
+    - FirstPersonController/standingCenter/y
+    - FirstPersonController/standingCenter/z
+    - FirstPersonController/standingCenter
+    - FirstPersonController/isCrouching
+    - FirstPersonController/duringCrouch
+    - FirstPersonController/walkHeadbobSpeed
+    - FirstPersonController/walkHeadbobAmount
+    - FirstPersonController/sprintHeadbobSpeed
+    - FirstPersonController/sprintHeadbobAmount
+    - FirstPersonController/crouchHeadbobSpeed
+    - FirstPersonController/crouchHeadbobAmount
+    - FirstPersonController/defaultPosY
+    - FirstPersonController/timer
+    - FirstPersonController/maxStamina
+    - FirstPersonController/staminaUseSpeed
+    - FirstPersonController/timeUntilRegenStart
+    - FirstPersonController/staminaRegenTick
+    - FirstPersonController/staminaRegenSpeed
+    - FirstPersonController/jumpStaminaCost
+    - FirstPersonController/currentStamina
+    - FirstPersonController/regeneratingStamina
+    - FirstPersonController/hitPointNormal/x
+    - FirstPersonController/hitPointNormal/y
+    - FirstPersonController/hitPointNormal/z
+    - FirstPersonController/hitPointNormal
+    - FirstPersonController/saveMenu
+    - FirstPersonController/inSavePoint
+    - FirstPersonController/isMenuActive
+    - FirstPersonController/playerCamera
+    - FirstPersonController/characterController
+    - FirstPersonController/moveDirection/x
+    - FirstPersonController/moveDirection/y
+    - FirstPersonController/moveDirection/z
+    - FirstPersonController/moveDirection
+    - FirstPersonController/currentInput/x
+    - FirstPersonController/currentInput/y
+    - FirstPersonController/currentInput
+    - FirstPersonController/canMove
+    - FirstPersonController/enabled
+    - FirstPersonController
+    - CharacterController/radius
+    - CharacterController/height
+    - CharacterController/center/x
+    - CharacterController/center/y
+    - CharacterController/center/z
+    - CharacterController/center
+    - CharacterController/slopeLimit
+    - CharacterController/stepOffset
+    - CharacterController/skinWidth
+    - CharacterController/minMoveDistance
+    - CharacterController/detectCollisions
+    - CharacterController/enableOverlapRecovery
+    - CharacterController/enabled
+    - CharacterController/isTrigger
+    - CharacterController/contactOffset
+    - CharacterController/hasModifiableContacts
+    - CharacterController
     - Transform/position/x
     - Transform/position/y
     - Transform/position/z
@@ -331,353 +478,50 @@ MonoBehaviour:
     - Transform/hasChanged
     - Transform/constrainProportionsScale
     - Transform
-    - FirstPersonController/<canMove>k__BackingField
-    - FirstPersonController/canSprint
-    - FirstPersonController/canJump
-    - FirstPersonController/canCrouch
-    - FirstPersonController/canHeadbob
-    - FirstPersonController/slideOnSlopes
-    - FirstPersonController/useStamina
-    - FirstPersonController/sprintKey/value__
-    - FirstPersonController/sprintKey
-    - FirstPersonController/jumpKey/value__
-    - FirstPersonController/jumpKey
-    - FirstPersonController/crouchKey/value__
-    - FirstPersonController/crouchKey
-    - FirstPersonController/walkSpeed
-    - FirstPersonController/sprintSpeed
-    - FirstPersonController/crouchSpeed
-    - FirstPersonController/slopeFallSpeed
-    - FirstPersonController/acceleration
-    - FirstPersonController/lookSpeedX
-    - FirstPersonController/lookSpeedY
-    - FirstPersonController/upperLookLimit
-    - FirstPersonController/lowerLookLimit
-    - FirstPersonController/jumpForce
-    - FirstPersonController/gravity
-    - FirstPersonController/crouchHeight
-    - FirstPersonController/standingHeight
-    - FirstPersonController/timeToCrouch
-    - FirstPersonController/crouchingCenter/x
-    - FirstPersonController/crouchingCenter/y
-    - FirstPersonController/crouchingCenter/z
-    - FirstPersonController/crouchingCenter
-    - FirstPersonController/standingCenter/x
-    - FirstPersonController/standingCenter/y
-    - FirstPersonController/standingCenter/z
-    - FirstPersonController/standingCenter
-    - FirstPersonController/isCrouching
-    - FirstPersonController/duringCrouch
-    - FirstPersonController/walkHeadbobSpeed
-    - FirstPersonController/walkHeadbobAmount
-    - FirstPersonController/sprintHeadbobSpeed
-    - FirstPersonController/sprintHeadbobAmount
-    - FirstPersonController/crouchHeadbobSpeed
-    - FirstPersonController/crouchHeadbobAmount
-    - FirstPersonController/defaultPosY
-    - FirstPersonController/timer
-    - FirstPersonController/maxStamina
-    - FirstPersonController/staminaUseSpeed
-    - FirstPersonController/timeUntilRegenStart
-    - FirstPersonController/staminaRegenTick
-    - FirstPersonController/staminaRegenSpeed
-    - FirstPersonController/currentStamina
-    - FirstPersonController/regeneratingStamina
-    - FirstPersonController/hitPointNormal/x
-    - FirstPersonController/hitPointNormal/y
-    - FirstPersonController/hitPointNormal/z
-    - FirstPersonController/hitPointNormal
-    - FirstPersonController/saveMenu
-    - FirstPersonController/inSavePoint
-    - FirstPersonController/playerCamera
-    - FirstPersonController/characterController
-    - FirstPersonController/moveDirection/x
-    - FirstPersonController/moveDirection/y
-    - FirstPersonController/moveDirection/z
-    - FirstPersonController/moveDirection
-    - FirstPersonController/currentInput/x
-    - FirstPersonController/currentInput/y
-    - FirstPersonController/currentInput
-    - FirstPersonController/rotationX
-    - FirstPersonController/canMove
-    - FirstPersonController/enabled
-    - CharacterController/radius
-    - CharacterController/height
-    - CharacterController/center/x
-    - CharacterController/center/y
-    - CharacterController/center/z
-    - CharacterController/center
-    - CharacterController/slopeLimit
-    - CharacterController/stepOffset
-    - CharacterController/skinWidth
-    - CharacterController/minMoveDistance
-    - CharacterController/detectCollisions
-    - CharacterController/enableOverlapRecovery
-    - CharacterController/enabled
-    - CharacterController/isTrigger
-    - CharacterController/contactOffset
-    - CharacterController/hasModifiableContacts
-    - CharacterController
-    - GameObject/layer
-    - GameObject/isStatic
-    - GameObject/tag
-    - GameObject/name
-    - GameObject/activeSelf
-    - GameObject
-    ModificationVersion: 7
+    ModificationVersion: 25
     ComponentsEnabled: []
     HashFieldsEnabled: []
     ObjectsEnabled: 
     HashSetFieldsEnabled:
-      m_buckets: 000000000000000082000000000000006e00000042000000000000005e000000000000004900000050000000000000004e0000002200000065000000000000000000000000000000880000008d00000000000000000000001f00000000000000890000005a000000000000000000000072000000000000000000000000000000000000000f000000540000005d000000750000004000000000000000310000000000000045000000000000000000000000000000830000001e0000001800000000000000000000000000000078000000710000007e000000000000008b0000000c0000000e00000087000000840000004c000000000000000000000058000000690000006b0000006c0000005b000000760000007a0000001d00000000000000000000000000000000000000000000000000000086000000350000002c000000000000000d0000000000000053000000090000000000000000000000470000000000000000000000800000000000000012000000790000002000000000000000000000000000000000000000000000000000000048000000000000004400000061000000370000003a00000000000000000000003b0000000000000000000000000000007d00000003000000000000001100000029000000000000003c00000074000000000000002d0000000000000000000000100000004f00000043000000000000001c00000000000000390000004a000000000000000000000000000000000000003f00000002000000000000003e000000000000000000000000000000270000000000000000000000630000004b0000000500000000000000000000000000000073000000000000000000000060000000000000000000000052000000000000005500000024000000670000004100000077000000000000007000000019000000000000000000000008000000000000000000000000000000260000007f0000008a0000000000000000000000320000005600000000000000510000002e0000008c0000002f00000066000000680000000000000000000000000000000000000085000000810000000000000000000000
+      m_buckets: 0000000000000000560000000000000042000000180000000000000030000000000000001b0000002200000000000000200000007d00000038000000000000000000000000000000010000000600000000000000000000007a00000000000000020000002c000000000000000000000046000000000000000000000000000000000000006a000000260000002f0000006600000080000000000000000700000000000000000000000000000000000000000000005700000079000000730000000000000000000000000000006f0000004500000052000000000000008b00000067000000690000005b000000580000006500000000000000000000002a0000007c0000003f000000400000002d0000006e00000086000000780000000000000000000000000000000000000000000000000000005a0000000b000000870000000000000068000000000000002500000064000000000000000000000019000000000000000000000054000000000000006d000000850000007b000000000000000000000000000000000000000000000000000000620000000000000070000000330000000d00000010000000000000000000000011000000000000000000000000000000510000005e000000000000006c00000084000000000000001200000076000000000000008800000000000000000000006b00000021000000000000000000000077000000000000000f0000001c00000000000000000000004a00000000000000150000005d0000000000000014000000000000000000000000000000820000000000000000000000360000001d000000600000000000000000000000000000004700000000000000000000003200000000000000000000002400000000000000270000007f0000003a000000170000004b00000000000000440000007400000000000000000000006300000000000000000000000000000081000000530000004300000000000000000000008300000028000000000000002300000089000000050000008a000000390000003b0000000000000000000000000000000000000059000000550000000000000000000000
       m_slots:
-      - hashCode: 407537608
+      - hashCode: 1829995467
         next: -1
         value:
-          HashCodePath: -559544797
-          HashCodeMember: -2094178328
-      - hashCode: 407981819
+          HashCodePath: 991929691
+          HashCodeMember: -1016887061
+      - hashCode: 96753816
         next: -1
         value:
-          HashCodePath: -559544797
-          HashCodeMember: -2093734117
-      - hashCode: 408426030
+          HashCodePath: 991929691
+          HashCodeMember: 1544838584
+      - hashCode: 844100458
         next: -1
         value:
-          HashCodePath: -559544797
-          HashCodeMember: -2093289906
-      - hashCode: 1587938851
+          HashCodePath: 991929691
+          HashCodeMember: 144701578
+      - hashCode: 1741864205
         next: -1
         value:
-          HashCodePath: 289311300
-          HashCodeMember: -789838941
-      - hashCode: 1411678312
+          HashCodePath: 991929691
+          HashCodeMember: 1042465325
+      - hashCode: 1189677078
         next: -1
         value:
-          HashCodePath: -1346007692
-          HashCodeMember: -2094178328
-      - hashCode: 1412122523
+          HashCodePath: 991929691
+          HashCodeMember: -1657205450
+      - hashCode: 991929691
         next: -1
-        value:
-          HashCodePath: -1346007692
-          HashCodeMember: -2093734117
-      - hashCode: 1412566734
-        next: -1
-        value:
-          HashCodePath: -1346007692
-          HashCodeMember: -2093289906
-      - hashCode: 801475956
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1576301836
-      - hashCode: 1920823368
-        next: -1
-        value:
-          HashCodePath: -784908073
-          HashCodeMember: -2094178328
-      - hashCode: 1921267579
-        next: 3
-        value:
-          HashCodePath: -784908073
-          HashCodeMember: -2093734117
-      - hashCode: 1921711790
-        next: -1
-        value:
-          HashCodePath: -784908073
-          HashCodeMember: -2093289906
-      - hashCode: 1362575575
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1015202217
-      - hashCode: 875041576
-        next: -1
-        value:
-          HashCodePath: -781611406
-          HashCodeMember: -2094178328
-      - hashCode: 875485787
-        next: -1
-        value:
-          HashCodePath: -781611406
-          HashCodeMember: -2093734117
-      - hashCode: 875929998
-        next: -1
-        value:
-          HashCodePath: -781611406
-          HashCodeMember: -2093289906
-      - hashCode: 1365872242
-        next: 5
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1011905550
-      - hashCode: 1114592232
-        next: -1
-        value:
-          HashCodePath: -1690467040
-          HashCodeMember: -2094178328
-      - hashCode: 1115036443
-        next: -1
-        value:
-          HashCodePath: -1690467040
-          HashCodeMember: -2093734117
-      - hashCode: 1115480654
-        next: -1
-        value:
-          HashCodePath: -1690467040
-          HashCodeMember: -2093289906
-      - hashCode: 457016608
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1920761184
-      - hashCode: 1870784008
-        next: -1
-        value:
-          HashCodePath: -477388915
-          HashCodeMember: -2094178328
-      - hashCode: 1871228219
-        next: -1
-        value:
-          HashCodePath: -477388915
-          HashCodeMember: -2093734117
-      - hashCode: 1871672430
-        next: -1
-        value:
-          HashCodePath: -477388915
-          HashCodeMember: -2093289906
-      - hashCode: 1670094733
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -707683059
-      - hashCode: 66879304
-        next: -1
-        value:
-          HashCodePath: -1451870609
-          HashCodeMember: -2094178328
-      - hashCode: 67323515
-        next: -1
-        value:
-          HashCodePath: -1451870609
-          HashCodeMember: -2093734117
-      - hashCode: 67767726
-        next: -1
-        value:
-          HashCodePath: -1451870609
-          HashCodeMember: -2093289906
-      - hashCode: 695613039
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1682164753
-      - hashCode: 1958172584
-        next: -1
-        value:
-          HashCodePath: -533480314
-          HashCodeMember: -2094178328
-      - hashCode: 1958616795
-        next: -1
-        value:
-          HashCodePath: -533480314
-          HashCodeMember: -2093734117
-      - hashCode: 1959061006
-        next: -1
-        value:
-          HashCodePath: -533480314
-          HashCodeMember: -2093289906
-      - hashCode: 1957728373
-        next: -1
-        value:
-          HashCodePath: -533480314
-          HashCodeMember: -2094622539
-      - hashCode: 1614003334
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -763774458
-      - hashCode: 814829640
-        next: -1
-        value:
-          HashCodePath: -1319943209
-          HashCodeMember: -2094178328
-      - hashCode: 815273851
-        next: -1
-        value:
-          HashCodePath: -1319943209
-          HashCodeMember: -2093734117
-      - hashCode: 815718062
-        next: 0
-        value:
-          HashCodePath: -1319943209
-          HashCodeMember: -2093289906
-      - hashCode: 814385429
-        next: -1
-        value:
-          HashCodePath: -1319943209
-          HashCodeMember: -2094622539
-      - hashCode: 827540439
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1550237353
-      - hashCode: 1279186351
-        next: 25
-        value:
-          HashCodePath: -702128352
-          HashCodeMember: -10968657
-      - hashCode: 1445355296
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -932422496
-      - hashCode: 1695698696
-        next: -1
-        value:
-          HashCodePath: -1843319115
-          HashCodeMember: -2094178328
-      - hashCode: 1696142907
-        next: -1
-        value:
-          HashCodePath: -1843319115
-          HashCodeMember: -2093734117
-      - hashCode: 1696587118
-        next: -1
-        value:
-          HashCodePath: -1843319115
-          HashCodeMember: -2093289906
-      - hashCode: 304164533
-        next: 21
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -2073613259
-      - hashCode: 1399490486
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -978287306
-      - hashCode: 1667908958
-        next: -1
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -709868834
-      - hashCode: 805255416
-        next: 34
-        value:
-          HashCodePath: 289311300
-          HashCodeMember: -1572522376
-      - hashCode: 289311300
-        next: 22
         value:
           HashCodePath: 0
-          HashCodeMember: 289311300
+          HashCodeMember: 991929691
       - hashCode: 563268743
         next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: -1986738649
       - hashCode: 1884344974
-        next: 39
+        next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: -665662418
@@ -747,7 +591,7 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: 2010189415
       - hashCode: 1353839591
-        next: 36
+        next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: -1196167801
@@ -761,33 +605,13 @@ MonoBehaviour:
         value:
           HashCodePath: -1594030137
           HashCodeMember: -1384802228
-      - hashCode: 2032687300
-        next: -1
-        value:
-          HashCodePath: -1594030137
-          HashCodeMember: 1630163556
-      - hashCode: 2033131511
-        next: 20
-        value:
-          HashCodePath: -1594030137
-          HashCodeMember: 1630607767
-      - hashCode: 1082074746
-        next: -1
-        value:
-          HashCodePath: -1594030137
-          HashCodeMember: -1467932646
-      - hashCode: 1187031021
-        next: -1
-        value:
-          HashCodePath: -1594030137
-          HashCodeMember: 784507277
       - hashCode: 117635091
-        next: 51
+        next: 9
         value:
           HashCodePath: -1594030137
           HashCodeMember: 1862594995
       - hashCode: 1893665162
-        next: 6
+        next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: -656342230
@@ -807,17 +631,17 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: -905309010
       - hashCode: 1432425672
-        next: 9
+        next: -1
         value:
           HashCodePath: -1097865749
           HashCodeMember: -2094178328
       - hashCode: 1432869883
-        next: 10
+        next: -1
         value:
           HashCodePath: -1097865749
           HashCodeMember: -2093734117
       - hashCode: 1433314094
-        next: 55
+        next: 13
         value:
           HashCodePath: -1097865749
           HashCodeMember: -2093289906
@@ -827,7 +651,7 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: -1500389493
       - hashCode: 515447752
-        next: 60
+        next: 18
         value:
           HashCodePath: -366871485
           HashCodeMember: -2094178328
@@ -862,7 +686,7 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: -931543467
       - hashCode: 510709172
-        next: 18
+        next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: 108185428
@@ -892,7 +716,7 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: 1877854918
       - hashCode: 1954237671
-        next: 69
+        next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: -595769721
@@ -921,6 +745,11 @@ MonoBehaviour:
         value:
           HashCodePath: -1594030137
           HashCodeMember: -98549833
+      - hashCode: 305058890
+        next: -1
+        value:
+          HashCodePath: -1594030137
+          HashCodeMember: 2050018794
       - hashCode: 746130358
         next: -1
         value:
@@ -932,7 +761,7 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: -916966174
       - hashCode: 1838628200
-        next: 50
+        next: 8
         value:
           HashCodePath: 1182529724
           HashCodeMember: -2094178328
@@ -952,17 +781,22 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: 780005980
       - hashCode: 802875140
-        next: 32
+        next: -1
         value:
           HashCodePath: -1594030137
           HashCodeMember: 400351396
       - hashCode: 1104899718
-        next: 53
+        next: 11
         value:
           HashCodePath: -1594030137
           HashCodeMember: 702375974
+      - hashCode: 677606081
+        next: 51
+        value:
+          HashCodePath: -1594030137
+          HashCodeMember: 275082337
       - hashCode: 1864333402
-        next: 99
+        next: 54
         value:
           HashCodePath: -1594030137
           HashCodeMember: -685673990
@@ -972,7 +806,7 @@ MonoBehaviour:
           HashCodePath: -1594030137
           HashCodeMember: -1554938065
       - hashCode: 281970856
-        next: 88
+        next: 42
         value:
           HashCodePath: -2093944594
           HashCodeMember: -2094178328
@@ -982,7 +816,7 @@ MonoBehaviour:
           HashCodePath: -2093944594
           HashCodeMember: -2093734117
       - hashCode: 282859278
-        next: -1
+        next: 2
         value:
           HashCodePath: -2093944594
           HashCodeMember: -2093289906
@@ -997,47 +831,47 @@ MonoBehaviour:
           HashCodePath: -77009161
           HashCodeMember: -2094178328
       - hashCode: 14011259
-        next: 108
+        next: 64
         value:
           HashCodePath: -77009161
           HashCodeMember: -2093734117
       - hashCode: 2070474487
-        next: 97
+        next: 61
         value:
           HashCodePath: -1594030137
           HashCodeMember: -479532905
-      - hashCode: 72431898
-        next: 26
-        value:
-          HashCodePath: -1594030137
-          HashCodeMember: -330091846
       - hashCode: 1434382843
-        next: 76
+        next: 30
         value:
           HashCodePath: -1594030137
           HashCodeMember: 1031859099
       - hashCode: 417143431
-        next: 86
+        next: 40
         value:
           HashCodePath: -1594030137
           HashCodeMember: 14619687
+      - hashCode: 553453511
+        next: -1
+        value:
+          HashCodePath: 0
+          HashCodeMember: -1594030137
       - hashCode: 2106628530
-        next: 94
+        next: 48
         value:
           HashCodePath: -448804401
           HashCodeMember: 138485330
       - hashCode: 192125089
-        next: 19
+        next: -1
         value:
           HashCodePath: -448804401
           HashCodeMember: -1776018111
       - hashCode: 1979503176
-        next: 41
+        next: -1
         value:
           HashCodePath: 698552743
           HashCodeMember: -2094178328
       - hashCode: 1979947387
-        next: 42
+        next: -1
         value:
           HashCodePath: 698552743
           HashCodeMember: -2093734117
@@ -1047,7 +881,7 @@ MonoBehaviour:
           HashCodePath: 698552743
           HashCodeMember: -2093289906
       - hashCode: 698552743
-        next: 105
+        next: 60
         value:
           HashCodePath: -448804401
           HashCodeMember: -1269590457
@@ -1077,12 +911,12 @@ MonoBehaviour:
           HashCodePath: -448804401
           HashCodeMember: 1266792068
       - hashCode: 938265495
-        next: 123
+        next: 79
         value:
           HashCodePath: -448804401
           HashCodeMember: -1029877705
       - hashCode: 1982762887
-        next: 122
+        next: 78
         value:
           HashCodePath: -448804401
           HashCodeMember: 14619687
@@ -1092,7 +926,7 @@ MonoBehaviour:
           HashCodePath: -448804401
           HashCodeMember: -1037078786
       - hashCode: 1539156465
-        next: 91
+        next: 45
         value:
           HashCodePath: -448804401
           HashCodeMember: -428986735
@@ -1106,337 +940,593 @@ MonoBehaviour:
         value:
           HashCodePath: 0
           HashCodeMember: -448804401
-      - hashCode: 1829995467
+      - hashCode: 407537608
         next: -1
         value:
-          HashCodePath: 991929691
-          HashCodeMember: -1016887061
-      - hashCode: 96753816
+          HashCodePath: -559544797
+          HashCodeMember: -2094178328
+      - hashCode: 407981819
         next: -1
         value:
-          HashCodePath: 991929691
-          HashCodeMember: 1544838584
-      - hashCode: 844100458
-        next: 110
-        value:
-          HashCodePath: 991929691
-          HashCodeMember: 144701578
-      - hashCode: 1741864205
-        next: 47
-        value:
-          HashCodePath: 991929691
-          HashCodeMember: 1042465325
-      - hashCode: 1189677078
+          HashCodePath: -559544797
+          HashCodeMember: -2093734117
+      - hashCode: 408426030
         next: -1
         value:
-          HashCodePath: 991929691
-          HashCodeMember: -1657205450
+          HashCodePath: -559544797
+          HashCodeMember: -2093289906
+      - hashCode: 1587938851
+        next: 29
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -789838941
+      - hashCode: 1411678312
+        next: -1
+        value:
+          HashCodePath: -1346007692
+          HashCodeMember: -2094178328
+      - hashCode: 1412122523
+        next: -1
+        value:
+          HashCodePath: -1346007692
+          HashCodeMember: -2093734117
+      - hashCode: 1412566734
+        next: 25
+        value:
+          HashCodePath: -1346007692
+          HashCodeMember: -2093289906
+      - hashCode: 801475956
+        next: -1
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1576301836
+      - hashCode: 1920823368
+        next: -1
+        value:
+          HashCodePath: -784908073
+          HashCodeMember: -2094178328
+      - hashCode: 1921267579
+        next: 94
+        value:
+          HashCodePath: -784908073
+          HashCodeMember: -2093734117
+      - hashCode: 1921711790
+        next: 71
+        value:
+          HashCodePath: -784908073
+          HashCodeMember: -2093289906
+      - hashCode: 1362575575
+        next: 52
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1015202217
+      - hashCode: 875041576
+        next: -1
+        value:
+          HashCodePath: -781611406
+          HashCodeMember: -2094178328
+      - hashCode: 875485787
+        next: -1
+        value:
+          HashCodePath: -781611406
+          HashCodeMember: -2093734117
+      - hashCode: 875929998
+        next: -1
+        value:
+          HashCodePath: -781611406
+          HashCodeMember: -2093289906
+      - hashCode: 1365872242
+        next: 96
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1011905550
+      - hashCode: 1114592232
+        next: -1
+        value:
+          HashCodePath: -1690467040
+          HashCodeMember: -2094178328
+      - hashCode: 1115036443
+        next: -1
+        value:
+          HashCodePath: -1690467040
+          HashCodeMember: -2093734117
+      - hashCode: 1115480654
+        next: 72
+        value:
+          HashCodePath: -1690467040
+          HashCodeMember: -2093289906
+      - hashCode: 457016608
+        next: 75
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1920761184
+      - hashCode: 1870784008
+        next: -1
+        value:
+          HashCodePath: -477388915
+          HashCodeMember: -2094178328
+      - hashCode: 1871228219
+        next: -1
+        value:
+          HashCodePath: -477388915
+          HashCodeMember: -2093734117
+      - hashCode: 1871672430
+        next: 3
+        value:
+          HashCodePath: -477388915
+          HashCodeMember: -2093289906
+      - hashCode: 1670094733
+        next: -1
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -707683059
+      - hashCode: 66879304
+        next: -1
+        value:
+          HashCodePath: -1451870609
+          HashCodeMember: -2094178328
+      - hashCode: 67323515
+        next: -1
+        value:
+          HashCodePath: -1451870609
+          HashCodeMember: -2093734117
+      - hashCode: 67767726
+        next: -1
+        value:
+          HashCodePath: -1451870609
+          HashCodeMember: -2093289906
+      - hashCode: 695613039
+        next: -1
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1682164753
+      - hashCode: 1958172584
+        next: -1
+        value:
+          HashCodePath: -533480314
+          HashCodeMember: -2094178328
+      - hashCode: 1958616795
+        next: -1
+        value:
+          HashCodePath: -533480314
+          HashCodeMember: -2093734117
+      - hashCode: 1959061006
+        next: -1
+        value:
+          HashCodePath: -533480314
+          HashCodeMember: -2093289906
+      - hashCode: 1957728373
+        next: -1
+        value:
+          HashCodePath: -533480314
+          HashCodeMember: -2094622539
+      - hashCode: 1614003334
+        next: 59
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -763774458
+      - hashCode: 814829640
+        next: -1
+        value:
+          HashCodePath: -1319943209
+          HashCodeMember: -2094178328
+      - hashCode: 815273851
+        next: -1
+        value:
+          HashCodePath: -1319943209
+          HashCodeMember: -2093734117
+      - hashCode: 815718062
+        next: 91
+        value:
+          HashCodePath: -1319943209
+          HashCodeMember: -2093289906
+      - hashCode: 814385429
+        next: 21
+        value:
+          HashCodePath: -1319943209
+          HashCodeMember: -2094622539
+      - hashCode: 827540439
+        next: -1
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1550237353
+      - hashCode: 1279186351
+        next: 116
+        value:
+          HashCodePath: -702128352
+          HashCodeMember: -10968657
+      - hashCode: 1445355296
+        next: 7
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -932422496
+      - hashCode: 1695698696
+        next: -1
+        value:
+          HashCodePath: -1843319115
+          HashCodeMember: -2094178328
+      - hashCode: 1696142907
+        next: 76
+        value:
+          HashCodePath: -1843319115
+          HashCodeMember: -2093734117
+      - hashCode: 1696587118
+        next: 77
+        value:
+          HashCodePath: -1843319115
+          HashCodeMember: -2093289906
+      - hashCode: 304164533
+        next: 112
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -2073613259
+      - hashCode: 1399490486
+        next: -1
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -978287306
+      - hashCode: 1667908958
+        next: -1
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -709868834
+      - hashCode: 805255416
+        next: 125
+        value:
+          HashCodePath: 289311300
+          HashCodeMember: -1572522376
+      - hashCode: 289311300
+        next: 113
+        value:
+          HashCodePath: 0
+          HashCodeMember: 289311300
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      - hashCode: 0
+        next: 0
+        value:
+          HashCodePath: 0
+          HashCodeMember: 0
+      m_count: 139
+      m_lastIndex: 139
+      m_freeList: -1
+      m_version: 2682
+    HashSetObjectsEnabled:
+      m_buckets: 1100000000000000180000000000000000000000030000000000000000000000120000000e00000000000000000000000f000000000000000000000014000000000000000900000013000000000000000000000001000000000000000400000017000000000000000000000015000000000000000000000016000000000000000c000000100000000b0000000000000000000000
+      m_slots:
       - hashCode: 991929691
         next: -1
-        value:
-          HashCodePath: 0
-          HashCodeMember: 991929691
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      - hashCode: 0
-        next: 0
-        value:
-          HashCodePath: 0
-          HashCodeMember: 0
-      m_count: 141
-      m_lastIndex: 141
-      m_freeList: -1
-      m_version: 832
-    HashSetObjectsEnabled:
-      m_buckets: 0d000000000000001200000000000000000000000e00000000000000000000000600000002000000000000000000000011000000000000000000000008000000000000001400000007000000000000000000000018000000000000000f0000000b000000000000000000000009000000000000000000000013000000000000001700000004000000160000000000000000000000
-      m_slots:
-      - hashCode: 289311300
+        value: 991929691
+      - hashCode: 553453511
         next: -1
+        value: -1594030137
+      - hashCode: 908415199
+        next: -1
+        value: 908415199
+      - hashCode: 988993299
+        next: -1
+        value: 988993299
+      - hashCode: 244718335
+        next: -1
+        value: -1902765313
+      - hashCode: 1049617899
+        next: -1
+        value: -1097865749
+      - hashCode: 1780612163
+        next: 4
+        value: -366871485
+      - hashCode: 1182529724
+        next: -1
+        value: 1182529724
+      - hashCode: 53539054
+        next: -1
+        value: -2093944594
+      - hashCode: 2070474487
+        next: -1
+        value: -77009161
+      - hashCode: 1698679247
+        next: 9
+        value: -448804401
+      - hashCode: 698552743
+        next: -1
+        value: 698552743
+      - hashCode: 289311300
+        next: 5
         value: 289311300
       - hashCode: 1587938851
         next: -1
         value: -559544797
       - hashCode: 801475956
-        next: 0
+        next: 12
         value: -1346007692
       - hashCode: 1362575575
         next: -1
         value: -784908073
       - hashCode: 1365872242
-        next: -1
+        next: 1
         value: -781611406
       - hashCode: 457016608
         next: -1
@@ -1451,50 +1541,14 @@ MonoBehaviour:
         next: -1
         value: -533480314
       - hashCode: 827540439
-        next: -1
+        next: 7
         value: -1319943209
       - hashCode: 1445355296
         next: -1
         value: -702128352
       - hashCode: 304164533
-        next: -1
+        next: 6
         value: -1843319115
-      - hashCode: 553453511
-        next: 4
-        value: -1594030137
-      - hashCode: 908415199
-        next: -1
-        value: 908415199
-      - hashCode: 988993299
-        next: -1
-        value: 988993299
-      - hashCode: 244718335
-        next: 11
-        value: -1902765313
-      - hashCode: 1049617899
-        next: 2
-        value: -1097865749
-      - hashCode: 1780612163
-        next: 15
-        value: -366871485
-      - hashCode: 1182529724
-        next: 9
-        value: 1182529724
-      - hashCode: 53539054
-        next: -1
-        value: -2093944594
-      - hashCode: 2070474487
-        next: -1
-        value: -77009161
-      - hashCode: 1698679247
-        next: 20
-        value: -448804401
-      - hashCode: 698552743
-        next: -1
-        value: 698552743
-      - hashCode: 991929691
-        next: -1
-        value: 991929691
       - hashCode: 0
         next: 0
         value: 0
@@ -1537,23 +1591,23 @@ MonoBehaviour:
       m_count: 24
       m_lastIndex: 24
       m_freeList: -1
-      m_version: 148
+      m_version: 467
     HashSetComponentsEnabled:
-      m_buckets: 010000000300000002000000
+      m_buckets: 030000000200000001000000
       m_slots:
-      - hashCode: 1321165359
-        next: -1
-        value: UnityEngine.Transform
       - hashCode: 553453511
         next: -1
         value: FirstPersonController
       - hashCode: 1588861138
         next: -1
         value: UnityEngine.CharacterController
+      - hashCode: 1321165359
+        next: -1
+        value: UnityEngine.Transform
       m_count: 3
       m_lastIndex: 3
       m_freeList: -1
-      m_version: 24
+      m_version: 81
     AreValidSavedHashs: 1
   Position: 0
   Rotation: 0
@@ -1565,11 +1619,11 @@ MonoBehaviour:
   Layer: 0
   GAMEOBJECT_STATIC_ID: 0
   GAMEOBJECT_PATH: 
-  Private_prefabId: 1286897178
-  PrefabSetTime: 1709811850
+  Private_prefabId: 308095852
+  PrefabSetTime: 1709897660
   CreateInRuntime: 0
   onLoad: 0
---- !u!1 &3295422538847572188
+--- !u!1 &4522408652034742695
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1577,10 +1631,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3295422538847572177}
-  - component: {fileID: 3295422538847572178}
-  - component: {fileID: 3295422538847572179}
-  - component: {fileID: 3295422538847572176}
+  - component: {fileID: 4522408652034742698}
+  - component: {fileID: 4522408652034742697}
+  - component: {fileID: 4522408652034742696}
+  - component: {fileID: 4522408652034742699}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1588,28 +1642,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3295422538847572177
+--- !u!4 &4522408652034742698
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422538847572188}
+  m_GameObject: {fileID: 4522408652034742695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.58299994, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3295422538935503893}
+  m_Father: {fileID: 4522408652265309550}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &3295422538847572178
+--- !u!20 &4522408652034742697
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422538847572188}
+  m_GameObject: {fileID: 4522408652034742695}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -1646,21 +1700,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3295422538847572179
+--- !u!81 &4522408652034742696
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422538847572188}
+  m_GameObject: {fileID: 4522408652034742695}
   m_Enabled: 1
---- !u!114 &3295422538847572176
+--- !u!114 &4522408652034742699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422538847572188}
+  m_GameObject: {fileID: 4522408652034742695}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
@@ -1687,7 +1741,7 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &3295422538935503894
+--- !u!1 &4522408652265309549
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1695,8 +1749,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3295422538935503893}
-  - component: {fileID: 3295422538935503892}
+  - component: {fileID: 4522408652265309550}
+  - component: {fileID: 4522408652265309551}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1704,39 +1758,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3295422538935503893
+--- !u!4 &4522408652265309550
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422538935503894}
+  m_GameObject: {fileID: 4522408652265309549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3295422538847572177}
-  m_Father: {fileID: 3295422537610164732}
-  m_RootOrder: 2
+  - {fileID: 4522408652034742698}
+  m_Father: {fileID: 4522408650906382471}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3295422538935503892
+--- !u!114 &4522408652265309551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422538935503894}
+  m_GameObject: {fileID: 4522408652265309549}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dead0748c63762d49b1635eebf164345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand: {fileID: 3295422539164729849}
-  _camera: {fileID: 3295422538847572177}
+  hand: {fileID: 4522408652321491074}
+  _camera: {fileID: 4522408652034742698}
   camSens: 200
-  camAcc: 5
---- !u!1 &3295422539164729850
+  camAcc: 8
+--- !u!1 &4522408652321491073
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1744,7 +1798,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3295422539164729849}
+  - component: {fileID: 4522408652321491074}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -1752,309 +1806,98 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3295422539164729849
+--- !u!4 &4522408652321491074
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3295422539164729850}
+  m_GameObject: {fileID: 4522408652321491073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.488, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1578491407670262252}
-  m_Father: {fileID: 3295422537610164732}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4007844088733449017
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4383524549189919107}
-  - component: {fileID: 827171183293394470}
-  - component: {fileID: 3215082530310232812}
-  m_Layer: 0
-  m_Name: Photo (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4383524549189919107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4007844088733449017}
-  m_LocalRotation: {x: 0.27059612, y: 0.65328234, z: 0.65328234, w: -0.27059612}
-  m_LocalPosition: {x: -0.288, y: -0.009, z: 1.8840003}
-  m_LocalScale: {x: 60, y: 60, z: 60}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3741506350897419084}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 225}
---- !u!33 &827171183293394470
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4007844088733449017}
-  m_Mesh: {fileID: -462981019419857548, guid: ef3fd0dca0e824d4391cf76d83693dcb, type: 3}
---- !u!23 &3215082530310232812
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4007844088733449017}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 25b9c5eb8158fdd4e8d92e3f6087d5dc, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7748394340539462971
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6974953449279467393}
-  - component: {fileID: 6297114886962880548}
-  - component: {fileID: 8108502334582019310}
-  m_Layer: 0
-  m_Name: Photo (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6974953449279467393
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748394340539462971}
-  m_LocalRotation: {x: -0.42482254, y: -0.5655415, z: -0.5703318, w: 0.41762462}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 60, y: 60, z: 60}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3741506350897419084}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90.7, y: -87.08099, z: -19.791992}
---- !u!33 &6297114886962880548
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748394340539462971}
-  m_Mesh: {fileID: -462981019419857548, guid: ef3fd0dca0e824d4391cf76d83693dcb, type: 3}
---- !u!23 &8108502334582019310
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748394340539462971}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 25b9c5eb8158fdd4e8d92e3f6087d5dc, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8941076069020039408
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3741506350897419084}
-  - component: {fileID: 2774536397163830185}
-  m_Layer: 0
-  m_Name: SavePoint
-  m_TagString: SavePoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3741506350897419084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8941076069020039408}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2773621839095475475}
-  - {fileID: 5108525481466434}
-  - {fileID: 4383524549189919107}
-  - {fileID: 6974953449279467393}
-  m_Father: {fileID: 3295422537610164732}
+  - {fileID: 476975230662570135}
+  m_Father: {fileID: 4522408650906382471}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2774536397163830185
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8941076069020039408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: -0.23099184, y: 1.5279539, z: 0.79099387}
---- !u!1001 &5598326727175489668
+--- !u!1001 &5392360545235133525
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3295422539164729849}
+    m_TransformParent: {fileID: 4522408650906382471}
     m_Modifications:
-    - target: {fileID: 6360731032740045808, guid: 5960bb89e5beb904e871393853de6d13,
-        type: 3}
-      propertyPath: m_Name
-      value: Flashlight
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 1.207
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0.015
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2
+      value: 3.745
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7064338
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7064338
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.030843573
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.030843573
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+    - target: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5960bb89e5beb904e871393853de6d13, type: 3}
---- !u!4 &1578491407670262252 stripped
+    - target: {fileID: 5885822112423487405, guid: 9aad1b471cd5e9d43a787e23241fe701,
+        type: 3}
+      propertyPath: m_Name
+      value: SavePoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4408043319142545412, guid: 9aad1b471cd5e9d43a787e23241fe701, type: 3}
+    - {fileID: 4520304225859974653, guid: 9aad1b471cd5e9d43a787e23241fe701, type: 3}
+    - {fileID: 619167752028218141, guid: 9aad1b471cd5e9d43a787e23241fe701, type: 3}
+    - {fileID: 3118400229096469979, guid: 9aad1b471cd5e9d43a787e23241fe701, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9aad1b471cd5e9d43a787e23241fe701, type: 3}
+--- !u!4 &6089625623905626180 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6365466357675323752, guid: 5960bb89e5beb904e871393853de6d13,
+  m_CorrespondingSourceObject: {fileID: 2186270454771125265, guid: 9aad1b471cd5e9d43a787e23241fe701,
     type: 3}
-  m_PrefabInstance: {fileID: 5598326727175489668}
+  m_PrefabInstance: {fileID: 5392360545235133525}
   m_PrefabAsset: {fileID: 0}
