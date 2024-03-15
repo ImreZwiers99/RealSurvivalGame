@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
+    public static FirstPersonController Instance { get; set; }
     public bool canMove { get; private set; } = true;
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
     private bool shouldJump => Input.GetKeyDown(jumpKey) && characterController.isGrounded;
     private bool shouldCrouch => Input.GetKeyDown(crouchKey) && !duringCrouch && characterController.isGrounded;
+
+    public GameObject Flashlight;
 
     [Header("Functional Options")]
     [SerializeField] private bool canSprint = true;
@@ -17,7 +20,8 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool canHeadbob = true;
     [SerializeField] private bool slideOnSlopes = true;
     [SerializeField] private bool useStamina = true;
-    public bool isMenuActive;
+    [SerializeField] private bool isFlashlightOn = true;
+    public static bool isMenuActive = false;
 
     [Header("Controls")]
     [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
@@ -96,7 +100,6 @@ public class FirstPersonController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         currentStamina = maxStamina;
         defaultPosY = playerCamera.transform.localPosition.y;
-
     }
     private void Start()
     {
@@ -106,7 +109,7 @@ public class FirstPersonController : MonoBehaviour
     }
     void Update()
     {
-        if (isMenuActive)
+        if (isMenuActive || InventorySystem.isOpen == true)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -117,14 +120,23 @@ public class FirstPersonController : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && inSavePoint)
+        if (Input.GetKeyDown(KeyCode.Escape) && inSavePoint && InventorySystem.isOpen == false)
         {
             isMenuActive = !isMenuActive;
 
-            saveMenu.SetActive(isMenuActive);
-
-           
+            saveMenu.SetActive(isMenuActive);          
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isFlashlightOn = !isFlashlightOn;
+            Flashlight.SetActive(false);
+        }
+        else if (isFlashlightOn)
+        {
+            Flashlight.SetActive(true);
+        }
+
         if (canMove)
         {       
             HandleMovementInput();
@@ -227,7 +239,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleStamina()
     {
-        if (isSprinting && currentInput != Vector2.zero && !isCrouching)
+        if (isSprinting && currentInput != Vector2.zero && !isCrouching && characterController.isGrounded)
         {
             if (regeneratingStamina != null)
             {

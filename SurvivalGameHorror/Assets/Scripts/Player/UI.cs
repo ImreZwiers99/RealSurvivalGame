@@ -12,7 +12,7 @@ public class UI : MonoBehaviour
         FirstPersonController.staminaChange += UpdateStamina;
     }
 
-    private void OnDisablee()
+    private void OnDisable()
     {
         FirstPersonController.staminaChange -= UpdateStamina;
     }
