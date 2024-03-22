@@ -19,8 +19,8 @@ public class InteractableObject : MonoBehaviour
         {
             if (!InventorySystem.Instance.CheckIfFull())
             {
-                InventorySystem.Instance.AddToInventory(ItemName);
                 Destroy(gameObject);
+                InventorySystem.Instance.AddToInventory(ItemName);
             }
             else
             {

@@ -109,7 +109,7 @@ public class FirstPersonController : MonoBehaviour
     }
     void Update()
     {
-        if (isMenuActive || InventorySystem.isOpen == true)
+        if (isMenuActive || Inventory.isOpen == true)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -120,7 +120,7 @@ public class FirstPersonController : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && inSavePoint && InventorySystem.isOpen == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && inSavePoint && Inventory.isOpen == false)
         {
             isMenuActive = !isMenuActive;
 

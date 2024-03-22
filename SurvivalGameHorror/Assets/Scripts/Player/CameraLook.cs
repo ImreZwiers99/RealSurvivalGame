@@ -14,7 +14,7 @@ public class CameraLook : MonoBehaviour
 
     void Update()
     {
-        if (InventorySystem.isOpen == false)
+        if (Inventory.isOpen == false)
         {
             rotationX += Input.GetAxis("Mouse Y") * camSens * Time.deltaTime;
             rotationY += Input.GetAxis("Mouse X") * camSens * Time.deltaTime;
