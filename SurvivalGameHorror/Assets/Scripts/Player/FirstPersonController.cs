@@ -6,7 +6,7 @@ using UnityEngine;
 public class FirstPersonController : MonoBehaviour
 {
     public static FirstPersonController Instance { get; set; }
-    public bool canMove { get; private set; } = true;
+    public static bool canMove = true;
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
     private bool shouldJump => Input.GetKeyDown(jumpKey) && characterController.isGrounded;
     private bool shouldCrouch => Input.GetKeyDown(crouchKey) && !duringCrouch && characterController.isGrounded;
@@ -14,6 +14,7 @@ public class FirstPersonController : MonoBehaviour
     public GameObject Flashlight;
 
     [Header("Functional Options")]
+    private bool isMoving = false;
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canJump = true;
     [SerializeField] private bool canCrouch = true;
@@ -45,7 +46,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float timeToCrouch = 0.3f;
     [SerializeField] private Vector3 crouchingCenter = new Vector3(0, 0.5f, 0);
     [SerializeField] private Vector3 standingCenter = new Vector3(0, 0, 0);
-    private bool isCrouching;
+    public static bool isCrouching;
     private bool duringCrouch;
 
     [Header("Headbob Variables")]
@@ -69,7 +70,14 @@ public class FirstPersonController : MonoBehaviour
     private Coroutine regeneratingStamina;
     public static Action<float> staminaChange;
 
+    [Header("Sounds")]
+    public AudioSource flashlightClick;
+    public GameObject Footsteps;
+
+    [Header("Menu")]
     private Vector3 hitPointNormal;
+
+    private bool clicked = false, canClick = true;
     private bool isSliding
     {
         get
@@ -103,12 +111,27 @@ public class FirstPersonController : MonoBehaviour
     }
     private void Start()
     {
+        canClick = true;
+        clicked = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         isMenuActive = false;
     }
     void Update()
     {
+        if (isSprinting && isMoving) Enemy.playerDecibel = 2;
+        else if (!isSprinting && isMoving) Enemy.playerDecibel = 1;
+        else if (!isSprinting && !isMoving && !clicked) Enemy.playerDecibel = 0;
+
+        if (canMove)
+        {
+            Footsteps.SetActive(true);
+        }
+        else if (!canMove)
+        {
+            Footsteps.SetActive(false);
+        }
+
         if (isMenuActive || Inventory.isOpen == true)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -127,20 +150,27 @@ public class FirstPersonController : MonoBehaviour
             saveMenu.SetActive(isMenuActive);          
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && canClick)
         {
-            isFlashlightOn = !isFlashlightOn;
-            Flashlight.SetActive(false);
+            StartCoroutine(FlashLightDelay());
+            canClick = false;
         }
-        else if (isFlashlightOn)
+
+        if (isFlashlightOn)
         {
             Flashlight.SetActive(true);
         }
 
-        if (canMove)
-        {       
-            HandleMovementInput();
+        if (clicked)
+        {
+            Enemy.playerDecibel = 1;
+            clicked = false;
+        }
 
+        if (canMove)
+        {                      
+            HandleMovementInput();
+             
             if (canJump)
             {
                 HandleJump();
@@ -165,6 +195,18 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private IEnumerator FlashLightDelay()
+    {
+        clicked = true;
+        flashlightClick.Play();
+        isFlashlightOn = !isFlashlightOn;
+        Flashlight.SetActive(false);
+
+        yield return new WaitForSeconds(2);
+
+        canClick = true;
+    }
+
     private void HandleMovementInput()
     {
         if (characterController.isGrounded)
@@ -172,6 +214,13 @@ public class FirstPersonController : MonoBehaviour
             float targetSpeed = isCrouching ? crouchSpeed : isSprinting ? sprintSpeed : walkSpeed;
             float targetInputX = targetSpeed * Input.GetAxis("Vertical");
             float targetInputY = targetSpeed * Input.GetAxis("Horizontal");
+
+            if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+            {
+                if (!isCrouching) isMoving = true;
+                else isMoving = false;
+            }
+            else isMoving = false;
 
             currentInput.x = Mathf.MoveTowards(currentInput.x, targetInputX, Time.deltaTime * acceleration);
             currentInput.y = Mathf.MoveTowards(currentInput.y, targetInputY, Time.deltaTime * acceleration);
@@ -184,7 +233,10 @@ public class FirstPersonController : MonoBehaviour
 
             moveDirection = cameraForward * currentInput.x + Camera.main.transform.right * currentInput.y;
             moveDirection.y = moveDirectionY;
+
+            AxeItem.canSwing = true;
         }
+        else AxeItem.canSwing = false;
     }
 
 

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b044dac1ac50ec644928c3d93d4ae5d5, type: 3}
   m_Name: Capsule
   m_EditorClassIdentifier: 
-  createdItemPrefab: {fileID: 1388000820981791634, guid: 96e730000cf56f349b51baa66e1d8632,
+  createdItemPrefab: {fileID: 6361621097655077662, guid: 4792da4faa1cc604c8922f6468f3b93d,
     type: 3}
   quantityProduced: 1
   requiredIngredients:
-  - itemName: Stone
+  - itemName: Iron
     requiredQuantity: 1
   - itemName: Wood
     requiredQuantity: 1

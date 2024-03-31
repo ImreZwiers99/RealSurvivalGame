@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.IO;
 
 public class Inventory : MonoBehaviour
 {
@@ -29,9 +30,14 @@ public class Inventory : MonoBehaviour
     [Header("Equippable Items")]
     public List<GameObject> equippableItems = new List<GameObject>();
     public Transform selectedItemImage;
+    private int curHotbarIndex = -1;
 
     [Header("Crafting")]
     public List<Recipe> itemRecipe = new List<Recipe>();
+
+    [Header("Save/Load")]
+    public List<GameObject> allItemprefabs = new List<GameObject>();
+    private string saveFileName = "inventorySave.json";
 
     public void Start()
     {
@@ -45,6 +51,13 @@ public class Inventory : MonoBehaviour
         {
             uiSlot.InitialiseSlot();
         }
+
+        LoadInventory();
+    }
+
+    public void OnApplicationQuit()
+    {
+        SaveInventory();
     }
 
     public void Update()
@@ -75,7 +88,14 @@ public class Inventory : MonoBehaviour
             if (Input.GetKeyDown(i.ToString()))
             {
                 EnableHotbarItem(i - 1);
+
+                curHotbarIndex = i - 1;
             }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            AttemptToUseItem();
         }
 
         dragImageIcon.transform.position = Input.mousePosition;
@@ -180,8 +200,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void AddItemToInventory(Item itemToAdd)
+    public void AddItemToInventory(Item itemToAdd, int overrideIndex = -1)
     {
+        if (overrideIndex != -1)
+        {
+            allInventorySlots[overrideIndex].SetItem(itemToAdd);
+            itemToAdd.gameObject.SetActive(false);
+            allInventorySlots[overrideIndex].UpdateData();
+            return;
+        }
+
         int leftoverQuantity = itemToAdd.currentQuantity;
         Slot openSlot = null;
         for (int i = 0; i < allInventorySlots.Count; i++)
@@ -336,4 +364,106 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+
+    private void SaveInventory()
+    {
+        InventoryData data = new InventoryData();
+
+        foreach (Slot slot in allInventorySlots)
+        {
+            Item item = slot.GetItem();
+            if (item != null)
+            {
+                ItemData itemData = new ItemData(item.name, item.currentQuantity, allInventorySlots.IndexOf(slot));
+                data.slotData.Add(itemData);
+            }
+        }
+
+        string jsonData = JsonUtility.ToJson(data);
+        File.WriteAllText(saveFileName, jsonData);
+    }
+
+    private void LoadInventory()
+    {
+        if (File.Exists(saveFileName))
+        {
+            string jsonData = File.ReadAllText(saveFileName);
+            InventoryData data = JsonUtility.FromJson<InventoryData>(jsonData);
+
+            foreach (ItemData itemData in data.slotData)
+            {
+                GameObject itemPrefab = allItemprefabs.Find(prefab => prefab.GetComponent<Item>().name == itemData.itemName);
+
+                if (itemPrefab != null)
+                {
+                    GameObject createdItem = Instantiate(itemPrefab, dropLocation.position, Quaternion.identity);
+                    Item item = createdItem.GetComponent<Item>();
+                    item.currentQuantity = itemData.quantity;
+                    AddItemToInventory(item, itemData.slotIndex);
+                }
+            }
+        }
+
+        foreach (Slot slot in allInventorySlots)
+        {
+            slot.UpdateData();
+        }
+    }
+
+    private void ClearInventory()
+    {
+        foreach (Slot slot in allInventorySlots)
+        {
+            slot.SetItem(null);
+        }
+    }
+
+    private void AttemptToUseItem()
+    {
+        if (curHotbarIndex == -1)
+        {
+            return;
+        }
+
+        Item curItem = hotbarSlots[curHotbarIndex].GetItem();
+
+        if (curItem)
+        {
+            curItem.UseItem();
+
+            if (curItem.currentQuantity != 0)
+            {
+                hotbarSlots[curHotbarIndex].UpdateData();
+            }
+            else
+            {
+                hotbarSlots[curHotbarIndex].SetItem(null);
+            }
+
+            EnableHotbarItem(curHotbarIndex);
+        }
+    }
+}
+
+[System.Serializable]
+
+public class ItemData
+{
+    public string itemName;
+    public int quantity;
+    public int slotIndex;
+
+    public ItemData (string itemName, int quantity, int slotIndex)
+    {
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.slotIndex = slotIndex;
+    }
+}
+
+[System.Serializable]
+
+public class InventoryData
+{
+    public List<ItemData> slotData = new List<ItemData>();
 }
