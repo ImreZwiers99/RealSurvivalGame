@@ -202,7 +202,7 @@ public class FirstPersonController : MonoBehaviour
         isFlashlightOn = !isFlashlightOn;
         Flashlight.SetActive(false);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         canClick = true;
     }

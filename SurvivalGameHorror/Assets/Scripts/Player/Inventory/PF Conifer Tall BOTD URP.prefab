@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 205477677417311662}
   - component: {fileID: 136397860403507302}
   - component: {fileID: 9002548602876043618}
-  - component: {fileID: -4512529550970550000}
+  - component: {fileID: 3482089591810361352}
   m_Layer: 0
   m_Name: PF Conifer Tall BOTD URP
   m_TagString: Untagged
@@ -341,8 +341,7 @@ MonoBehaviour:
     maxQuantityDrop: 3
   rotationAmount: 75
   hasRotated: 0
-  treeStump: {fileID: 0}
---- !u!208 &-4512529550970550000
+--- !u!208 &3482089591810361352
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,7 +351,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.5, y: 1, z: 0.5}
+  m_Extents: {x: 0.25, y: 1, z: 0.25}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1

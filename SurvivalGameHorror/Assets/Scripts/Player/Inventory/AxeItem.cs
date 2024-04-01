@@ -55,7 +55,7 @@ public class AxeItem : MonoBehaviour
 
     private IEnumerator AxeAttackDelay()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         animator.SetBool("AxeAttack", false);
         fix = false;
     }
