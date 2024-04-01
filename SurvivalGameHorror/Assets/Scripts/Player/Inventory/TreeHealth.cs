@@ -8,6 +8,7 @@ public class TreeHealth : MonoBehaviour
     [SerializeField] private List<ItemDrop> itemDrops = new List<ItemDrop>();
     public float rotationAmount = 15f;
     public bool hasRotated = false;
+    private bool fix = false;
     //public GameObject treeStump;
     //[SerializeField] private float damageCooldown = 0.5f;
     //private float newTime = 0.5f;
@@ -37,8 +38,9 @@ public class TreeHealth : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !fix)
         {
+            fix = true;
             foreach (ItemDrop item in itemDrops)
             {
                 int quantityToDrop = Random.Range(item.minQuantityDrop, item.maxQuantityDrop);
