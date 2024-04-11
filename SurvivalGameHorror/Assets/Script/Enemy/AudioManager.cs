@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour
     // AudioSource for playing footstep sounds
     public AudioSource footstepAudioSource;
 
-    // The terrain the player is on
-    public Terrain terrain;
+    // List of terrains the player can walk on
+    public List<Terrain> terrains;
 
     // AudioClip array to store the footstep sounds for grass
     public AudioClip[] grassFootstepSounds;
@@ -46,32 +46,37 @@ public class AudioManager : MonoBehaviour
                 AudioClip[] sounds = footstepSounds[currentTexture];
                 int randomIndex = Random.Range(0, sounds.Length);
                 selectedSound = sounds[randomIndex];
-                // Play the footstep sound
-                //PlayFootstepSound();
             }
         }
     }
+
     private Texture GetTextureAtPoint(Vector3 point)
     {
-        TerrainData terrainData = terrain.terrainData;
-        int mapX = Mathf.FloorToInt((point.x - terrain.transform.position.x) / terrainData.size.x * terrainData.alphamapWidth);
-        int mapZ = Mathf.FloorToInt((point.z - terrain.transform.position.z) / terrainData.size.z * terrainData.alphamapHeight);
-        float[,,] splatmapData = terrainData.GetAlphamaps(mapX, mapZ, 1, 1);
-
-        int maxTextureIndex = 0;
-        float maxTextureMix = 0;
-
-        for (int i = 0; i < splatmapData.GetLength(2); i++)
+        foreach (Terrain terrain in terrains)
         {
-            if (splatmapData[0, 0, i] > maxTextureMix)
+            TerrainData terrainData = terrain.terrainData;
+            int mapX = Mathf.FloorToInt((point.x - terrain.transform.position.x) / terrainData.size.x * terrainData.alphamapWidth);
+            int mapZ = Mathf.FloorToInt((point.z - terrain.transform.position.z) / terrainData.size.z * terrainData.alphamapHeight);
+            float[,,] splatmapData = terrainData.GetAlphamaps(mapX, mapZ, 1, 1);
+
+            int maxTextureIndex = 0;
+            float maxTextureMix = 0;
+
+            for (int i = 0; i < splatmapData.GetLength(2); i++)
             {
-                maxTextureIndex = i;
-                maxTextureMix = splatmapData[0, 0, i];
+                if (splatmapData[0, 0, i] > maxTextureMix)
+                {
+                    maxTextureIndex = i;
+                    maxTextureMix = splatmapData[0, 0, i];
+                }
             }
+
+            return terrainData.splatPrototypes[maxTextureIndex].texture;
         }
 
-        return terrainData.splatPrototypes[maxTextureIndex].texture;
+        return null;
     }
+
     // Method to play a footstep sound
     private void PlayFootstepSound()
     {
