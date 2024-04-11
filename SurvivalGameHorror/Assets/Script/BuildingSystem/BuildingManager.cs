@@ -17,12 +17,13 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private Material ghostMaterialInvalid;
     [SerializeField] private float connectorOverlapRadius = 1;
     [SerializeField] private float maxGroundAngle = 45f;
+    //[SerializeField] private GameObject buildObject;
 
     [Header("Internal State")]
     [SerializeField] private bool isBuilding = false;
     [SerializeField] private int currentBuildingIndex;
     private GameObject ghostBuildGameobject;
-    private bool isGhostInValidPosition = false;
+    public static bool isGhostInValidPosition = false;
     private Transform ModelParent = null;
 
     private void Update()
@@ -30,13 +31,16 @@ public class BuildingManager : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.B))
         //    isBuilding = !isBuilding;
 
-        if (isBuilding)
+        if (isBuilding && gameObject.activeSelf)
         {
             ghostBuild();
 
-            if (Input.GetMouseButtonDown(0))
+            if (isGhostInValidPosition)
             {
-                placeBuild();
+                if (Input.GetMouseButtonDown(0))
+                {
+                    placeBuild();
+                }
             }
         }
         else if (ghostBuildGameobject)

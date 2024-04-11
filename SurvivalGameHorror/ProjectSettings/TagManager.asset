@@ -8,6 +8,7 @@ TagManager:
   - SaveScripts
   - Slot
   - Pickupable
+  - Buildables
   layers:
   - Default
   - TransparentFX
@@ -18,11 +19,11 @@ TagManager:
   - Item
   - Grass
   - Rock
-  - 
-  - 
-  - 
-  - 
-  - 
+  - InfiniteRange
+  - BuildingSphere
+  - Water
+  - Tree
+  - Terrain
   - 
   - 
   - 
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: InfiniteRange
+    uniqueID: 688912965
     locked: 0
