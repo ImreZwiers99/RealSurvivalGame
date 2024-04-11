@@ -59,6 +59,7 @@ MonoBehaviour:
     type: 2}
   connectorOverlapRadius: 1
   maxGroundAngle: 30
+  buildManager: {fileID: 3204683212670356902}
   isBuilding: 1
   currentBuildingIndex: 0
 --- !u!65 &3204683212670356899

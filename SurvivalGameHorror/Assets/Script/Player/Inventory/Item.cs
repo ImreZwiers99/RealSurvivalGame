@@ -14,7 +14,7 @@ public class Item : MonoBehaviour
 
     [Header("Item Use")]
     public UnityEvent myEvent;
-    public bool removeOneOnUse;
+    public static bool removeOneOnUse;
 
     public void UseItem()
     {
@@ -22,7 +22,7 @@ public class Item : MonoBehaviour
         {
             myEvent.Invoke();
 
-            if (removeOneOnUse)
+            if (removeOneOnUse && BuildingManager.isGhostInValidPosition == true)
             {
                 currentQuantity--;
             }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4033964170994324}
   - component: {fileID: 33553830683910954}
   - component: {fileID: 23309444090733188}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Conifer Tall BOTD LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4657980456482902}
   - component: {fileID: 33559743796376114}
   - component: {fileID: 23933673824694470}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Conifer Tall BOTD LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925666623870900}
   - component: {fileID: 227004396696467460}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Conifer Tall BOTD Billboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 136397860403507302}
   - component: {fileID: 9002548602876043618}
   - component: {fileID: 3482089591810361352}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PF Conifer Tall BOTD URP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ LODGroup:
   m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.498934
+  - screenRelativeHeight: 0.49521565
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23933673824694470}
@@ -302,7 +302,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23309444090733188}
-  - screenRelativeHeight: 0.083583504
+  - screenRelativeHeight: 0.12249778
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 227004396696467460}

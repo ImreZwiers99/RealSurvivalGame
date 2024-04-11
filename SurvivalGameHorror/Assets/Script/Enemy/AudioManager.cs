@@ -3,83 +3,78 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
-    // Dictionary voor het mappen van texturenamen naar AudioClip-arrays voor voetstapgeluiden
+    // Dictionary to map texture names to AudioClip arrays for footstep sounds
     public Dictionary<Texture, AudioClip[]> footstepSounds = new Dictionary<Texture, AudioClip[]>();
 
-    // AudioSource voor het afspelen van voetstapgeluiden
+    // AudioSource for playing footstep sounds
     public AudioSource footstepAudioSource;
 
-    AudioClip selectedSound;
-
-    // Het terrein waarop de speler zich bevindt
+    // The terrain the player is on
     public Terrain terrain;
 
-    // Texturen om te controleren
+    // AudioClip array to store the footstep sounds for grass
+    public AudioClip[] grassFootstepSounds;
+
+    // AudioClip array to store the footstep sounds for rock
+    public AudioClip[] rockFootstepSounds;
+
+    // Currently selected footstep sound
+    private AudioClip selectedSound;
+
     public Texture grassTexture;
     public Texture rockTexture;
 
     void Start()
     {
-        // Voeg de texturen en bijbehorende voetstapgeluiden toe aan de dictionary
+        // Add textures and their corresponding footstep sounds to the dictionary
         footstepSounds.Add(grassTexture, grassFootstepSounds);
         footstepSounds.Add(rockTexture, rockFootstepSounds);
-        // Voeg hier andere texturen en bijbehorende geluiden toe indien nodig
+        // Add other textures and their sounds here if needed
     }
 
     private void Update()
     {
-        // Controleer welke texture de speler momenteel raakt
-        int xCoordinate = Mathf.RoundToInt(transform.position.x / terrain.terrainData.size.x * terrain.terrainData.alphamapWidth);
-        int zCoordinate = Mathf.RoundToInt(transform.position.z / terrain.terrainData.size.z * terrain.terrainData.alphamapHeight);
-
-        // Alphamaps ophalen op de huidige positie
-        float[,,] alphamaps = terrain.terrainData.GetAlphamaps(xCoordinate, zCoordinate, 1, 1);
-
-        // Bepaal de index van de hoofdtextuur
-        int mainTextureIndex = GetMainTexture(alphamaps);
-
-        if (mainTextureIndex != -1 && mainTextureIndex < terrain.terrainData.alphamapLayers)
+        // Check which texture the player is currently walking on
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
         {
-            // Controleer of de index binnen het geldige bereik van de alphamap-lagen ligt
-            Texture currentTexture = terrain.terrainData.splatPrototypes[mainTextureIndex].texture;
+            Texture currentTexture = GetTextureAtPoint(hit.point);
 
             if (footstepSounds.ContainsKey(currentTexture))
             {
-                // Selecteer willekeurig een AudioClip uit de bijbehorende array
+                // Select a random AudioClip from the corresponding array
                 AudioClip[] sounds = footstepSounds[currentTexture];
                 int randomIndex = Random.Range(0, sounds.Length);
                 selectedSound = sounds[randomIndex];
+                // Play the footstep sound
+                //PlayFootstepSound();
             }
         }
     }
-
-    // Methode om de hoofdtextuur van een blend te bepalen
-    private int GetMainTexture(float[,,] splatmapData)
+    private Texture GetTextureAtPoint(Vector3 point)
     {
-        float maxBlend = 0;
-        int maxIndex = -1;
+        TerrainData terrainData = terrain.terrainData;
+        int mapX = Mathf.FloorToInt((point.x - terrain.transform.position.x) / terrainData.size.x * terrainData.alphamapWidth);
+        int mapZ = Mathf.FloorToInt((point.z - terrain.transform.position.z) / terrainData.size.z * terrainData.alphamapHeight);
+        float[,,] splatmapData = terrainData.GetAlphamaps(mapX, mapZ, 1, 1);
+
+        int maxTextureIndex = 0;
+        float maxTextureMix = 0;
 
         for (int i = 0; i < splatmapData.GetLength(2); i++)
         {
-            if (splatmapData[0, 0, i] > maxBlend)
+            if (splatmapData[0, 0, i] > maxTextureMix)
             {
-                maxBlend = splatmapData[0, 0, i];
-                maxIndex = i;
+                maxTextureIndex = i;
+                maxTextureMix = splatmapData[0, 0, i];
             }
         }
 
-        return maxIndex;
+        return terrainData.splatPrototypes[maxTextureIndex].texture;
     }
-
-
-    // Methode om een willekeurig voetstapgeluid af te spelen
+    // Method to play a footstep sound
     private void PlayFootstepSound()
     {
         footstepAudioSource.PlayOneShot(selectedSound);
     }
-
-    // Hieronder worden de voetstapgeluiden voor elke texture gedefinieerd
-    public AudioClip[] grassFootstepSounds;
-    public AudioClip[] rockFootstepSounds;
-    // Voeg hier andere geluiden toe indien nodig
 }

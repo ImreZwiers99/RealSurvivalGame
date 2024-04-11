@@ -17,6 +17,37 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: 5b267ce1784873b439759c1845f59568, type: 2}
     renderPass: 500
     resolution: 0
+--- !u!114 &-4897997398810670296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35a3fb358b019541a4d4246cdca5181, type: 3}
+  m_Name: SKYPRORenderer
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    material: {fileID: 2100000, guid: 491dfa8b4421978438e7307d6e8d2dc4, type: 2}
+--- !u!114 &-3971904500370957427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fc12ddd23443b47b1a51403adeb283, type: 3}
+  m_Name: WaterVolume
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    material: {fileID: 2100000, guid: ad0a7fc2d1190ff46985f49b15861c82, type: 2}
+    renderPass: 400
 --- !u!114 &-3750247641991549570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,6 +63,37 @@ MonoBehaviour:
   m_Active: 0
   settings:
     material: {fileID: 2100000, guid: 35d9725b9695c6640ac2ab11b7684861, type: 2}
+--- !u!114 &-2275273105946759003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35a3fb358b019541a4d4246cdca5181, type: 3}
+  m_Name: SKYPRORenderer
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    material: {fileID: 2100000, guid: ebbe411e17e5622428cf7a2e4dd4c9ee, type: 2}
+--- !u!114 &-2046341059121297447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fc12ddd23443b47b1a51403adeb283, type: 3}
+  m_Name: WaterVolume
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    material: {fileID: 2100000, guid: ad0a7fc2d1190ff46985f49b15861c82, type: 2}
+    renderPass: 400
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,9 +151,10 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 4664294768638488390}
-  - {fileID: 2380073221974885725}
-  m_RendererFeatureMap: adc0de57c6d2eee546ef682c61e7ba405d853b37fcb70721
+  - {fileID: -2275273105946759003}
+  - {fileID: -4897997398810670296}
+  - {fileID: -3971904500370957427}
+  m_RendererFeatureMap: adc0de57c6d2eee5a5300b412a9b6ce0284b1a0551d106bc8d1b9da5e6f5e0c8
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -147,33 +210,3 @@ MonoBehaviour:
   m_Active: 0
   settings:
     material: {fileID: 2100000, guid: 35d9725b9695c6640ac2ab11b7684861, type: 2}
---- !u!114 &2380073221974885725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35a3fb358b019541a4d4246cdca5181, type: 3}
-  m_Name: SKYPRORenderer
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  settings:
-    material: {fileID: 2100000, guid: 491dfa8b4421978438e7307d6e8d2dc4, type: 2}
---- !u!114 &4664294768638488390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35a3fb358b019541a4d4246cdca5181, type: 3}
-  m_Name: SKYPRORenderer
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  settings:
-    material: {fileID: 2100000, guid: ebbe411e17e5622428cf7a2e4dd4c9ee, type: 2}

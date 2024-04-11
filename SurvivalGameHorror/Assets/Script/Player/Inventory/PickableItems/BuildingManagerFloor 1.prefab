@@ -61,6 +61,7 @@ MonoBehaviour:
   maxGroundAngle: 30
   isBuilding: 1
   currentBuildingIndex: 0
+  isGhostInValidPosition: 0
 --- !u!65 &6553022476343952839
 BoxCollider:
   m_ObjectHideFlags: 0
