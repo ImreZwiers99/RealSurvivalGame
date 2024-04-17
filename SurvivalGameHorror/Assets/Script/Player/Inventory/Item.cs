@@ -14,7 +14,7 @@ public class Item : MonoBehaviour
 
     [Header("Item Use")]
     public UnityEvent myEvent;
-    public static bool removeOneOnUse;
+    public bool removeOneOnUse;
 
     public void UseItem()
     {
