@@ -18,17 +18,21 @@ public class AudioManager : MonoBehaviour
     // AudioClip array to store the footstep sounds for rock
     public AudioClip[] rockFootstepSounds;
 
+    public AudioClip[] sandFootstepSounds;
+
     // Currently selected footstep sound
     private AudioClip selectedSound;
 
     public Texture grassTexture;
     public Texture rockTexture;
+    public Texture sandTexture;
 
     void Start()
     {
         // Add textures and their corresponding footstep sounds to the dictionary
         footstepSounds.Add(grassTexture, grassFootstepSounds);
         footstepSounds.Add(rockTexture, rockFootstepSounds);
+        footstepSounds.Add(sandTexture, sandFootstepSounds);
         // Add other textures and their sounds here if needed
     }
 

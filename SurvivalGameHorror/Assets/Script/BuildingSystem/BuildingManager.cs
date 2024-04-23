@@ -23,7 +23,7 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private bool isBuilding = false;
     [SerializeField] private int currentBuildingIndex;
     private GameObject ghostBuildGameobject;
-    public static bool isGhostInValidPosition = false;
+    public static bool isGhostInValidPosition = true;
     private Transform ModelParent = null;
 
     private void Update()

@@ -10,12 +10,26 @@ public class PlayerHealth : MonoBehaviour
 
     public float editorFood;
     public float editorWater;
+    public float editorHealth;
 
     public float foodDrain = 0.1f;
     public float waterDrain = 0.1f;
+    public float healthDrain = 1f;
+
+    public GameObject Camera;
+    public GameObject viewCam;
+    public GameObject UI;
+    public GameObject Items;
+    //public Animator animator;
+
+    public void Start()
+    {
+        viewCam.GetComponent<Animator>().enabled = false;
+    }
 
     private void Update()
     {
+
         if (health >= 100)
             health = 100;
 
@@ -25,12 +39,33 @@ public class PlayerHealth : MonoBehaviour
         if (water >= 100)
             water = 100;
 
+        if (health <= 0 && editorHealth <=  0)
+        {
+            gameObject.GetComponent<FirstPersonController>().enabled = false;
+            Camera.GetComponent<CameraLook>().enabled = false;
+            viewCam.GetComponent<Animator>().enabled = true;
+            UI.SetActive(false);
+            Items.SetActive(false);
+        }
+        else
+        {
+            viewCam.GetComponent<Animator>().enabled = false;
+        }
+            
         Debug.Log(health);
-        //Debug.Log(water);
-        //Debug.Log(food);
 
+        health = editorHealth;
         food = editorFood -= foodDrain * Time.deltaTime;
         water = editorWater -= waterDrain * Time.deltaTime;
+        if (water > 0)
+            health = health;
+        else if (water <=0)
+            health = editorHealth -= healthDrain * Time.deltaTime;
+
+        if (food > 0)
+            health = health;
+        else if (food <= 0)
+            health = editorHealth -= healthDrain * Time.deltaTime;
     }
 
     public void AddHealth(int addedHealth)

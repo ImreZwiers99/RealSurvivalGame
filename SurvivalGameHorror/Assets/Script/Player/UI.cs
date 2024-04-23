@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
     [SerializeField] private Slider staminaSlider = default;
     [SerializeField] private Slider foodSlider = default;
     [SerializeField] private Slider waterSlider = default;
+    [SerializeField] private Slider healthSlider = default;
 
     private void OnEnable()
     {
@@ -23,6 +25,7 @@ public class UI : MonoBehaviour
     {
         foodSlider.value = PlayerHealth.food;
         waterSlider.value = PlayerHealth.water;
+        healthSlider.value = PlayerHealth.health;
     }
 
     private void Start()
@@ -33,5 +36,10 @@ public class UI : MonoBehaviour
     private void UpdateStamina(float currentStamina)
     {
         staminaSlider.value = currentStamina;
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("MainMap");
     }
 }

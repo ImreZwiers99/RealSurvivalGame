@@ -39,6 +39,6 @@ Material:
     - steps: 1
     m_Colors:
     - Albedo: {r: 0.056247775, g: 0.1509434, b: 0.15094337, a: 1}
-    - bounds: {r: 2000, g: 200, b: 2000, a: 0}
-    - pos: {r: 0, g: -93.433334, b: 0, a: 0}
+    - bounds: {r: 2000, g: 50, b: 2000, a: 0}
+    - pos: {r: 0, g: -18.433332, b: 0, a: 0}
   m_BuildTextureStacks: []

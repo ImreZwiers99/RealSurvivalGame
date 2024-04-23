@@ -168,7 +168,7 @@ public class FirstPersonController : MonoBehaviour
         }
 
         if (canMove)
-        {                      
+        {
             HandleMovementInput();
              
             if (canJump)
