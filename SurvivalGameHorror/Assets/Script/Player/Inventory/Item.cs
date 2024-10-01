@@ -16,14 +16,22 @@ public class Item : MonoBehaviour
     public UnityEvent myEvent;
     public bool removeOneOnUse;
 
+
+    BuildingManager BuildingManager;
+
+    private void Update()
+    {
+        //BuildingManager.isGhostInValidPosition = true;
+    }
     public void UseItem()
     {
+        //BuildingManager.isGhostInValidPosition = true;
         if (myEvent.GetPersistentEventCount() > 0)
         {
-            myEvent.Invoke();
-
-            if (removeOneOnUse && BuildingManager.isGhostInValidPosition == true)
+            myEvent.Invoke();          
+            if (removeOneOnUse)
             {
+                Destroy(BuildingManager.ghostBuildGameobject);
                 currentQuantity--;
             }
         }

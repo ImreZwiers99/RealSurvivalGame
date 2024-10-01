@@ -1,156 +1,193 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-	private float movementSpeed, distance, idleTimer_Script = 3;
-	public float editor_WalkSpeed = 1f, editor_RunSpeed = 2f, editor_idleTimer = 3, 
-		walkingRange = 50, walkDetection = 5, runDetection = 10, minimalDetection = 5;
+    private float movementSpeed, distance, idleTimer_Script = 3;
+    public float editor_WalkSpeed = 1f, editor_RunSpeed = 2f, editor_idleTimer = 3,
+        walkingRange = 50, walkDetection = 5, runDetection = 10, minimalDetection = 5, attackRange = 2f;
 
-	[SerializeField] private NavMeshAgent agent;
-	public Animator enemyAnimator;
+    [SerializeField] private NavMeshAgent agent;
+    public Animator enemyAnimator;
+    public PlayerHealth playerHealth;
 
-	[SerializeField] private EnemyState currentState;
-	[SerializeField] private Transform player;
+    [SerializeField] private EnemyState currentState;
+    [SerializeField] private Transform player;
 
-	public static int playerDecibel = 0;
+    public static int playerDecibel = 0;
 
-	private void Start()
-	{
-		playerDecibel = 0;
-		SetCurrentState(EnemyState.Idle);
-		idleTimer_Script = editor_idleTimer;
-	}
+    private bool isAttacking = false;
 
-	private void Update()
-	{
-		agent.speed = movementSpeed;
-		enemyAnimator.SetFloat("velocity", agent.velocity.magnitude);
-		distance = Vector3.Distance(player.position, agent.transform.position);
-		EnemyBehaviour();
-		SoundDetection();
-	}
+    private void Start()
+    {
+        playerDecibel = 0;
+        SetCurrentState(EnemyState.Idle);
+        idleTimer_Script = editor_idleTimer;
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
 
-	private void SoundDetection()
+    private void Update()
+    {
+        agent.speed = movementSpeed;
+        enemyAnimator.SetFloat("velocity", agent.velocity.magnitude);
+        distance = Vector3.Distance(player.position, agent.transform.position);
+        EnemyBehaviour();
+        SoundDetection();
+    }
+
+    private void SoundDetection()
     {
         if (distance <= runDetection && distance > walkDetection && playerDecibel == 2) SetCurrentState(EnemyState.Chase);
         else if (distance <= walkDetection && distance > minimalDetection && playerDecibel != 0) SetCurrentState(EnemyState.Chase);
-		else if (distance <= minimalDetection) SetCurrentState(EnemyState.Chase);
-	}
+        else if (distance <= minimalDetection) SetCurrentState(EnemyState.Chase);
+    }
 
-	private void EnemyBehaviour()
-	{
-		switch (currentState)
-		{
-			case EnemyState.Idle:
-				IdleBehaviour();
-				break;
-			case EnemyState.Roaming:
-				RoamingBehaviour();
-				break;
-			case EnemyState.Chase:
-				ChaseBehaviour();
-				break;
-			default:
-				break;
-		}
-	}
-
-	private void IdleBehaviour()
+    private void EnemyBehaviour()
     {
-		if(agent.hasPath == false)
+        switch (currentState)
         {
-			movementSpeed = 0;
-			idleTimer_Script -= Time.deltaTime;
-			if (idleTimer_Script <= 0)
-			{
-				idleTimer_Script = editor_idleTimer;
-				SetCurrentState(EnemyState.Roaming);
-			}
-		}
-	}
+            case EnemyState.Idle:
+                IdleBehaviour();
+                break;
+            case EnemyState.Roaming:
+                RoamingBehaviour();
+                break;
+            case EnemyState.Chase:
+                ChaseBehaviour();
+                break;
+            default:
+                break;
+        }
+    }
 
-	private void RoamingBehaviour()
-	{
-		if (agent.hasPath == true)
-		{
-			if (agent.remainingDistance > 4)
-			{
-				movementSpeed += Time.deltaTime;
-				if (movementSpeed >= editor_WalkSpeed) movementSpeed = editor_WalkSpeed;
-			}
-			else if (agent.remainingDistance <= 4)
-			{
-				movementSpeed -= Time.deltaTime * 0.5f;
-				if (movementSpeed <= 0.2f) movementSpeed = 0.2f;
-			}
-		}
-		else if (agent.hasPath == false)
-		{
-			if (movementSpeed == 0) agent.SetDestination(RandomPosition());
-			else if (movementSpeed != 0) SetCurrentState(EnemyState.Idle);
-		}
-		
-		if (distance <= runDetection && playerDecibel != 0 || distance <= minimalDetection)
-		{
-			agent.SetDestination(player.position);
-			SetCurrentState(EnemyState.Chase);
-		}
-	}
-
-	private void ChaseBehaviour()
-	{
-		if(agent.hasPath == true)
+    private void IdleBehaviour()
+    {
+        if (agent.hasPath == false)
         {
-			movementSpeed += Time.deltaTime;
-			if (movementSpeed >= editor_RunSpeed) movementSpeed = editor_RunSpeed;
-		}
-		else if (agent.hasPath == false)
-		{
-			movementSpeed -= Time.deltaTime;
-			if (movementSpeed <= editor_WalkSpeed)
-			{
-				movementSpeed = editor_WalkSpeed;
-				SetCurrentState(EnemyState.Roaming);
-			}
-		}
+            movementSpeed = 0;
+            idleTimer_Script -= Time.deltaTime;
+            if (idleTimer_Script <= 0)
+            {
+                idleTimer_Script = editor_idleTimer;
+                SetCurrentState(EnemyState.Roaming);
+            }
+        }
+    }
 
-		if (distance <= runDetection && distance > minimalDetection && playerDecibel != 0) agent.SetDestination(player.position);
-		else if (distance <= minimalDetection) agent.SetDestination(player.position);
-	}
+    private void RoamingBehaviour()
+    {
+        if (agent.hasPath == true)
+        {
+            if (agent.remainingDistance > 4)
+            {
+                movementSpeed += Time.deltaTime;
+                if (movementSpeed >= editor_WalkSpeed) movementSpeed = editor_WalkSpeed;
+            }
+            else if (agent.remainingDistance <= 4)
+            {
+                movementSpeed -= Time.deltaTime * 0.5f;
+                if (movementSpeed <= 0.2f) movementSpeed = 0.2f;
+            }
+        }
+        else if (agent.hasPath == false)
+        {
+            if (movementSpeed == 0) agent.SetDestination(RandomPosition());
+            else if (movementSpeed != 0) SetCurrentState(EnemyState.Idle);
+        }
 
-	private void SetCurrentState(EnemyState newState)
-	{
-		currentState = newState;
+        if (distance <= runDetection && playerDecibel != 0 || distance <= minimalDetection)
+        {
+            agent.SetDestination(player.position);
+            SetCurrentState(EnemyState.Chase);
+        }
+    }
 
-		switch (currentState)
-		{
-			case EnemyState.Idle:
-				break;
-			case EnemyState.Roaming:
-				break;
-			case EnemyState.Chase:
-				break;
-			default:
-				break;
-		}
-	}
+    private void ChaseBehaviour()
+    {
+        if (distance <= attackRange)
+        {
+            AttackPlayer();
+        }
+        else
+        {
+            enemyAnimator.SetBool("attack", false);
+            if (agent.hasPath == true)
+            {
+                movementSpeed += Time.deltaTime;
+                if (movementSpeed >= editor_RunSpeed) movementSpeed = editor_RunSpeed;
+            }
+            else if (agent.hasPath == false)
+            {
+                movementSpeed -= Time.deltaTime;
+                if (movementSpeed <= editor_WalkSpeed)
+                {
+                    movementSpeed = editor_WalkSpeed;
+                    SetCurrentState(EnemyState.Roaming);
+                }
+            }
 
-	private Vector3 RandomPosition()
-	{
-		Vector3 randomPos = UnityEngine.Random.insideUnitCircle * walkingRange;
+            if (distance <= runDetection && distance > minimalDetection && playerDecibel != 0) agent.SetDestination(player.position);
+            else if (distance <= minimalDetection) agent.SetDestination(player.position);
+        }
+    }
 
-		Vector3 newRandomPosition = transform.position + randomPos;
+    private void AttackPlayer()
+    {
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.SetBool("attack", true);
+            }
 
-		return newRandomPosition;
-	}
+            StartCoroutine(AttackCooldown());
+        }
+    }
 
-	private enum EnemyState
-	{
-		Idle,
-		Roaming,
-		Chase
-	}
+    private IEnumerator AttackCooldown()
+    {
+        float cooldownTime = 1f; 
+        yield return new WaitForSeconds(cooldownTime);
+        if (distance <= attackRange)
+        {
+            int damageAmount = 20;
+            playerHealth.TakeDamage(damageAmount);
+        }
+        isAttacking = false;
+    }
+
+    private void SetCurrentState(EnemyState newState)
+    {
+        currentState = newState;
+
+        switch (currentState)
+        {
+            case EnemyState.Idle:
+                break;
+            case EnemyState.Roaming:
+                break;
+            case EnemyState.Chase:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private Vector3 RandomPosition()
+    {
+        Vector3 randomPos = UnityEngine.Random.insideUnitCircle * walkingRange;
+
+        Vector3 newRandomPosition = transform.position + randomPos;
+
+        return newRandomPosition;
+    }
+
+    private enum EnemyState
+    {
+        Idle,
+        Roaming,
+        Chase
+    }
 }

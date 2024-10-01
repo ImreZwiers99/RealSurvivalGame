@@ -1,0 +1,30 @@
+# Blender MTL File: 'pickaxe-raw-l.blend'
+# Material Count: 2
+
+newmtl Metal_Semirough_01.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\Metal_Semirough_01.001_Normal.png
+map_Kd textures\\Metal_Semirough_01.001_Base_Color.png
+map_Ns textures\\Metal_Semirough_01.001_Roughness.png
+refl textures\\Metal_Semirough_01.001_Metallic.png
+
+newmtl Wood_Rough_001a
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\Wood_Rough_001a_Normal.png
+map_Kd textures\\Wood_Rough_001a_Base_Color.png
+map_Ns textures\\Wood_Rough_001a_Base_Color.png
+refl textures\\Wood_Rough_001a_Metallic.png

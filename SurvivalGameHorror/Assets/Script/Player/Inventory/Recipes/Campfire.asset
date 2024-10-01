@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b044dac1ac50ec644928c3d93d4ae5d5, type: 3}
+  m_Name: Campfire
+  m_EditorClassIdentifier: 
+  createdItemPrefab: {fileID: 2192074591080071087, guid: 92791d7a20684e94ebb6b3ff4ccf855d,
+    type: 3}
+  quantityProduced: 1
+  requiredIngredients:
+  - itemName: Wood
+    requiredQuantity: 10
+  - itemName: Stone
+    requiredQuantity: 5

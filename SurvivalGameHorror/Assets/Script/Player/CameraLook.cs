@@ -16,7 +16,7 @@ public class CameraLook : MonoBehaviour
     {
         if (FirstPersonController.canMove == true)
         {
-            if (Inventory.isOpen == false)
+            if (Inventory.isOpen == false && FirstPersonController.isMenuActive == false)
             {
                 rotationX += Input.GetAxis("Mouse Y") * camSens * Time.deltaTime;
                 rotationY += Input.GetAxis("Mouse X") * camSens * Time.deltaTime;

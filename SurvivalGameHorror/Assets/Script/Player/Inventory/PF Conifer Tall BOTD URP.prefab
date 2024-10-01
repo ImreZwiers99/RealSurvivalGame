@@ -294,15 +294,15 @@ LODGroup:
   m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.80273974
+  - screenRelativeHeight: 0.5997478
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23933673824694470}
-  - screenRelativeHeight: 0.34743655
+  - screenRelativeHeight: 0.29935494
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23309444090733188}
-  - screenRelativeHeight: 0
+  - screenRelativeHeight: 0.078194395
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 227004396696467460}
@@ -333,12 +333,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ef982f331f7734d879511d0390d14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 10
+  currentHealth: 8
   itemDrops:
   - itemToDrop: {fileID: 8683148944741967939, guid: 122f449446478d247ab10a0a1af1bf25,
       type: 3}
+    minQuantityDrop: 2
+    maxQuantityDrop: 4
+  - itemToDrop: {fileID: 7533837583681438374, guid: 39c3591bc2e4dee498890a12ad121462,
+      type: 3}
     minQuantityDrop: 1
-    maxQuantityDrop: 3
+    maxQuantityDrop: 1
   rotationAmount: 75
   hasRotated: 0
 --- !u!208 &3482089591810361352

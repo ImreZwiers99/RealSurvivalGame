@@ -87,6 +87,7 @@ public class Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(i.ToString()))
             {
+                Destroy(BuildingManager.ghostBuildGameobject);
                 EnableHotbarItem(i - 1);
 
                 curHotbarIndex = i - 1;
@@ -279,6 +280,7 @@ public class Inventory : MonoBehaviour
             if (hotbarSlot.GetItem().equippableItemIndex != -1)
             {
                 equippableItems[hotbarSlot.GetItem().equippableItemIndex].SetActive(true);
+                Destroy(BuildingManager.ghostBuildGameobject);
             }
         }
     }

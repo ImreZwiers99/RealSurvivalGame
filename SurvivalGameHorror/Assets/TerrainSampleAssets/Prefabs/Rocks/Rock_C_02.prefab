@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1266643619140011799}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Rock_C_02_Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,24 +43,48 @@ PrefabInstance:
       value: Rock_C_02
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -202,6 +226,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
 --- !u!4 &7601787364241537885 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 42a5fc4117eb11e4db95a975d19a76ca, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 42a5fc4117eb11e4db95a975d19a76ca,
+    type: 3}
   m_PrefabInstance: {fileID: 7601787364241662429}
   m_PrefabAsset: {fileID: 0}

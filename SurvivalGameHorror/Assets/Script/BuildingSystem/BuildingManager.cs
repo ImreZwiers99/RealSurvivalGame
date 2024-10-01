@@ -22,14 +22,15 @@ public class BuildingManager : MonoBehaviour
     [Header("Internal State")]
     [SerializeField] private bool isBuilding = false;
     [SerializeField] private int currentBuildingIndex;
-    private GameObject ghostBuildGameobject;
-    public static bool isGhostInValidPosition = true;
+    public static GameObject ghostBuildGameobject;
+    public bool isGhostInValidPosition = false;
     private Transform ModelParent = null;
 
     private void Update()
     {
         //if (Input.GetKeyDown(KeyCode.B))
         //    isBuilding = !isBuilding;
+        //isGhostInValidPosition = true;
 
         if (isBuilding && gameObject.activeSelf)
         {

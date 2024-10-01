@@ -95,6 +95,7 @@ public class FirstPersonController : MonoBehaviour
     }
 
     public GameObject saveMenu;
+    public GameObject invUI;
     private bool inSavePoint;
     private Camera playerCamera;
     private CharacterController characterController;
@@ -143,11 +144,22 @@ public class FirstPersonController : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && inSavePoint && Inventory.isOpen == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && Inventory.isOpen == false)
         {
             isMenuActive = !isMenuActive;
 
-            saveMenu.SetActive(isMenuActive);          
+            saveMenu.SetActive(isMenuActive);
+        }
+
+        if (isMenuActive)
+        {
+            invUI.SetActive(false);
+            Footsteps.SetActive(false);
+        }
+        else if (!isMenuActive)
+        {
+            invUI.SetActive(true);
+            Footsteps.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.F) && canClick)
@@ -167,7 +179,7 @@ public class FirstPersonController : MonoBehaviour
             clicked = false;
         }
 
-        if (canMove)
+        if (canMove && isMenuActive == false)
         {
             HandleMovementInput();
              
@@ -235,8 +247,13 @@ public class FirstPersonController : MonoBehaviour
             moveDirection.y = moveDirectionY;
 
             AxeItem.canSwing = true;
+            PickaxeItem.canSwing = true;
         }
-        else AxeItem.canSwing = false;
+        else
+        {
+            AxeItem.canSwing = false;
+            PickaxeItem.canSwing = false;
+        }
     }
 
 
@@ -246,14 +263,13 @@ public class FirstPersonController : MonoBehaviour
         if (!isCrouching && shouldJump && currentStamina > 0)
         {
             moveDirection.y = jumpForce;
-            currentStamina -= jumpStaminaCost; // Define jumpStaminaCost variable representing stamina consumption for jumping
+            currentStamina -= jumpStaminaCost; 
             if (currentStamina < 0)
             {
                 currentStamina = 0;
             }
             staminaChange?.Invoke(currentStamina);
 
-            // Reset the coroutine responsible for regenerating stamina
             if (regeneratingStamina != null)
             {
                 StopCoroutine(regeneratingStamina);

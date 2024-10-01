@@ -3,24 +3,18 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
-    // Dictionary to map texture names to AudioClip arrays for footstep sounds
     public Dictionary<Texture, AudioClip[]> footstepSounds = new Dictionary<Texture, AudioClip[]>();
 
-    // AudioSource for playing footstep sounds
     public AudioSource footstepAudioSource;
 
-    // List of terrains the player can walk on
     public List<Terrain> terrains;
 
-    // AudioClip array to store the footstep sounds for grass
     public AudioClip[] grassFootstepSounds;
 
-    // AudioClip array to store the footstep sounds for rock
     public AudioClip[] rockFootstepSounds;
 
     public AudioClip[] sandFootstepSounds;
 
-    // Currently selected footstep sound
     private AudioClip selectedSound;
 
     public Texture grassTexture;
@@ -29,16 +23,13 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        // Add textures and their corresponding footstep sounds to the dictionary
         footstepSounds.Add(grassTexture, grassFootstepSounds);
         footstepSounds.Add(rockTexture, rockFootstepSounds);
         footstepSounds.Add(sandTexture, sandFootstepSounds);
-        // Add other textures and their sounds here if needed
     }
 
     private void Update()
     {
-        // Check which texture the player is currently walking on
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
         {
@@ -46,7 +37,6 @@ public class AudioManager : MonoBehaviour
 
             if (footstepSounds.ContainsKey(currentTexture))
             {
-                // Select a random AudioClip from the corresponding array
                 AudioClip[] sounds = footstepSounds[currentTexture];
                 int randomIndex = Random.Range(0, sounds.Length);
                 selectedSound = sounds[randomIndex];
@@ -81,7 +71,6 @@ public class AudioManager : MonoBehaviour
         return null;
     }
 
-    // Method to play a footstep sound
     private void PlayFootstepSound()
     {
         footstepAudioSource.PlayOneShot(selectedSound);

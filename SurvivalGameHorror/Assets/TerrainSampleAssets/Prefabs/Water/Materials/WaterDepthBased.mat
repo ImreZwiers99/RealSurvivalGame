@@ -126,7 +126,7 @@ Material:
     - _EnableFogOnTransparent: 1
     - _Fresnel: 3
     - _NormalStrength: 0.01
-    - _Normal_Strength: 1
+    - _Normal_Strength: 0.029
     - _OpaqueCullMode: 2
     - _QueueControl: 1
     - _QueueOffset: 0
@@ -138,11 +138,11 @@ Material:
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
     - _Rim_AO: 1
-    - _Rim_Falloff: 99
+    - _Rim_Falloff: 1000
     - _Rim_Normal_Mask: 0.63
     - _Rim_Smoothness: 0.1
-    - _Smoothness: 0.6
-    - _Speed: 0.05
+    - _Smoothness: 0.979
+    - _Speed: 0.02
     - _SrcBlend: 5
     - _StencilRef: 0
     - _StencilRefDepth: 8
