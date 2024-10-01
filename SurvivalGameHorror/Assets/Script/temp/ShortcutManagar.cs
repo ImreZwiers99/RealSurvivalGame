@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class ShortcutManager : MonoBehaviour
 {
-    public List<GameObject> potentialItems; // List of items to store in the inventory
-    public List<GameObject> items; // List of items to store in the inventory
-    private List<GameObject> shortcuts = new List<GameObject>(); // List to store shortcuts
+    public List<GameObject> potentialItems; 
+    public List<GameObject> items; 
+    private List<GameObject> shortcuts = new List<GameObject>(); 
 
-    // Start is called before the first frame update
     private void Start()
     {
         UpdateShortcuts();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Checking for shortcut inputs
         for (int i = 0; i < shortcuts.Count; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
@@ -28,7 +25,6 @@ public class ShortcutManager : MonoBehaviour
     }
     void UpdateShortcuts()
     {
-        // Assigning items to shortcuts
         for (int i = 0; i < Mathf.Min(items.Count, 123); i++)
         {
             shortcuts.Add(items[i]);
@@ -48,13 +44,10 @@ public class ShortcutManager : MonoBehaviour
         }
     }
 
-    // Function to use the shortcut
     void UseShortcut(int index)
     {
-        // Checking if the shortcut is valid and the item is available
         if (index >= 0 && index < shortcuts.Count && shortcuts[index] != null)
         {
-            // Toggle the active state of the item
             shortcuts[index].SetActive(!shortcuts[index].activeSelf);
         }
     }
